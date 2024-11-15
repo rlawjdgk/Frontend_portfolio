@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { ProjectData } from "../assets/projectData";
+import { ProjectData } from "../assets/projectData"; // project 정보
 
 const ModalWrapper = styled.div`
   position: fixed;
@@ -167,10 +167,17 @@ const CloseBtn = styled.div`
   }
 `;
 const ModalProject = ({ project, onClose }) => {
+  // - project: 모달에 표시할 프로젝트 데이터 (props로 전달받음)
+  // - onClose: 모달 닫기 동작을 처리하는 함수 (props로 전달받음)
+
   if (!project) return null;
+  // project 값이 없으면 (null 또는 undefined) 컴포넌트 렌더링 중단
+  // 모달을 열 프로젝트가 선택되지 않았을 때 아무것도 표시하지 않음
 
   // 선택한 skill에 해당하는 추가 정보 가져오기
   const projectDetails = ProjectData.find((info) => info.id === project.id);
+  // ProjectData 배열에서 선택된 project의 id와 일치하는 데이터를 찾음
+  // projectDetails는 해당 프로젝트의 상세 정보를 포함
 
   return (
     <ModalWrapper>

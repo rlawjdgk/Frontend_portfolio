@@ -107,17 +107,28 @@ const SkillWrap = styled.div`
 `;
 
 const Skills = () => {
-  const [selectedSkill, setSelectedSkill] = useState(null); // 선택한 기술 상태
-  const [isModalOpen, setIsModalOpen] = useState(false); // 모달 열기 상태
+  const [selectedSkill, setSelectedSkill] = useState(null);
+  // 선택한 기술(skill)의 상태를 관리하는 변수
+  // 초기값은 `null`로 설정되어 기술이 선택되지 않은 상태
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  // 모달 창의 열림/닫힘 상태를 관리하는 변수
+  // 초기값은 `false`로 설정되어 모달이 닫힌 상태
 
   const openModal = (skill) => {
     setSelectedSkill(skill);
+    // 선택된 기술(skill)을 상태에 저장
+
     setIsModalOpen(true);
+    // 모달을 열기 위해 `isModalOpen`을 `true`로 설정
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
+    // 모달을 닫기 위해 `isModalOpen`을 `false`로 설정
+
     setSelectedSkill(null);
+    // 모달을 닫을 때 선택된 기술을 초기화 (null로 설정)
   };
 
   return (

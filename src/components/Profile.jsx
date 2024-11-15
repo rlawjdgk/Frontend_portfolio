@@ -172,6 +172,11 @@ const tabs = ["Contact"];
 
 const Profile = () => {
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
+  // 선택된 탭의 상태를 관리하기 위한 React useState 훅
+  // - `selectedTab`: 현재 선택된 탭의 값 (상태 변수)
+  // - `setSelectedTab`: 상태를 업데이트하는 함수
+  // - `tabs[0]`: 초기값으로 `tabs` 배열의 첫 번째 항목이 설정됨
+
   return (
     <Wrapper id="Profile">
       <Inner>

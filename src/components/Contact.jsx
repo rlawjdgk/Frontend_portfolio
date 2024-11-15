@@ -131,31 +131,33 @@ const MailBtn = styled.div`
 `;
 
 const Contact = () => {
-  const form = useRef();
+  const form = useRef(); // 폼 요소에 접근하기 위한 useRef 사용
 
   const sendEmail = (e) => {
-    e.preventDefault();
+    e.preventDefault(); // 폼 제출 시 페이지 리로드 방지
 
     // emailjs를 사용하여 폼 제출
     emailjs
       .sendForm(
-        "service_azj9dqy", // 이메일 서비스 ID
-        "template_4q2s5dr", // 이메일 템플릿 ID
-        form.current, // 폼 데이터
-        "Uuz-mybybGNd_4XFD" // 사용자 ID (EmailJS에서 발급받은 ID)
+        "service_azj9dqy", // EmailJS에서 생성한 이메일 서비스 ID
+        "template_4q2s5dr", // EmailJS에서 생성한 템플릿 ID
+        form.current, // 폼 요소 데이터를 참조
+        "Uuz-mybybGNd_4XFD" // EmailJS 사용자 ID (API 키)
       )
       .then(
         (result) => {
-          console.log(result.text);
+          // 이메일 전송 성공 시 실행
+          console.log(result.text); // 성공 메시지를 콘솔에 출력
           e.target.reset(); // 폼 초기화
-          alert("메시지가 성공적으로 전송되었습니다.");
+          alert("메시지가 성공적으로 전송되었습니다."); // 성공 메시지 알림
         },
+        // 이메일 전송 실패 시 실행
         (error) => {
-          console.error("실패...", error.text);
-          alert("메시지 전송에 실패했습니다. 다시 시도해주세요.");
+          console.error("실패...", error.text); // 오류 메시지를 콘솔에 출력
+          alert("메시지 전송에 실패했습니다. 다시 시도해주세요."); // 실패 메시지 알림
         }
       );
-
+    // 이메일 전송 함수 반환 (특별한 목적 없이 호출 흐름 유지용)
     return { sendEmail };
   };
 

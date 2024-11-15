@@ -97,17 +97,26 @@ const Span = styled.span`
 `;
 
 const Projects = () => {
-  const [selectedProject, setSelectedProject] = useState(null); // 선택한 기술 상태
+  const [selectedProject, setSelectedProject] = useState(null);
+  // 선택한 프로젝트 상태를 관리하는 React 상태 변수
+  // 초기값은 `null`, 사용자가 프로젝트를 선택할 때 해당 프로젝트 정보를 저장
+
   const [isModalOpen, setIsModalOpen] = useState(false); // 모달 열기 상태
 
   const openModal = (project) => {
     setSelectedProject(project);
+    // 선택한 프로젝트 정보를 `selectedProject` 상태에 저장
+
     setIsModalOpen(true);
+    // 모달을 열기 위해 `isModalOpen`을 `true`로 설정
   };
 
   const closeModal = () => {
     setSelectedProject(false);
+    // 모달을 닫을 때 선택된 프로젝트를 초기화 (null로 설정)
+
     setSelectedProject(null);
+    // 모달을 닫기 위해 `isModalOpen`을 `false`로 설정
   };
   return (
     <Wrapper>

@@ -87,13 +87,22 @@ const tabs = [
   { id: "Project", icon: <TiDocument /> },
   { id: "Contact", icon: <IoMailOutline /> },
 ];
+// 네비게이션 메뉴 항목을 객체 배열로 정의
+// - 각 객체는 id와 해당 탭에 표시할 아이콘(icon) 컴포넌트를 포함
+// - id: 메뉴 항목의 고유 이름
+// - icon: React 아이콘 컴포넌트 (각 항목에 시각적 아이콘 추가)
 
 const MobileHeader = ({ changeTheme }) => {
+  // 부모 컴포넌트에서 전달받은 changeTheme 함수로 테마 변경 가능
   const [selectedTab, setSelectedTab] = useState(tabs[0].id);
+  // 현재 선택된 탭의 id를 관리하는 상태 변수
+  // 초기값은 tabs 배열의 첫 번째 항목("Profile")의 id
   const [isModalOpen, setIsModalOpen] = useState(false);
-
+  // 모달 창의 열림/닫힘 상태를 관리하는 상태 변수
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
+    // 모달 창의 상태를 현재 상태의 반대값으로 변경
+    // true -> false, false -> true
   };
 
   return (

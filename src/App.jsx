@@ -13,15 +13,20 @@ const Wrapper = styled.div`
 
 const App = () => {
   const [theme, setTheme] = useState(lightTheme);
+  // 테마 상태를 관리하는 변수 (기본값: lightTheme
 
-  // 초기 테마 로드
+  // 초기 테마 로드 (로컬 스토리지에서 저장된 테마를 불러옴)
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
-    if (savedTheme) {
-      setTheme(JSON.parse(savedTheme)); // 로컬 스토리지에서 테마 설정
-    }
-  }, []);
+    // 로컬 스토리지에서 'theme' 항목 가져오기
 
+    if (savedTheme) {
+      setTheme(JSON.parse(savedTheme));
+      // 로컬 스토리지에서 테마 설정
+    }
+  }, []); // 빈 배열을 넣어서 컴포넌트가 처음 렌더링될 때만 실행
+
+  // 테마 변경 함수
   const changeTheme = (selectedTheme) => {
     let newTheme;
     if (selectedTheme === "light") {
@@ -34,7 +39,9 @@ const App = () => {
       newTheme = warmTheme;
     }
     setTheme(newTheme);
-    localStorage.setItem("theme", JSON.stringify(newTheme)); // 로컬 스토리지에 테마 저장
+    // 새로운 테마 상태로 업데이트
+    localStorage.setItem("theme", JSON.stringify(newTheme));
+    // 로컬 스토리지에 선택된 테마 저장
   };
 
   return (

@@ -59,17 +59,26 @@ const Underline = styled(motion.div)`
 `;
 
 const tabs = ["Home", "AboutMe", "Skills", "Project", "Contact"];
+// 네비게이션 메뉴 항목의 이름을 배열로 정의
+// 이 배열은 각각의 탭 이름을 나타냄
 
 const Header = ({ changeTheme }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  // 모달 창의 열림/닫힘 상태를 관리하는 상태 변수
+  // 초기값은 false (모달이 닫힌 상태)
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
+  // 현재 선택된 탭을 관리하는 상태 변수
+  // 초기값은 tabs 배열의 첫 번째 값 ("Home")
 
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
+    // 모달 창의 상태를 현재 상태의 반대값으로 변경
+    // true -> false, false -> true
   };
 
   const closeModal = () => {
-    setIsModalOpen(false); // 모달 닫기
+    setIsModalOpen(false);
+    // 모달 창을 닫는 함수 (isModalOpen 상태를 false로 설정)
   };
 
   return (

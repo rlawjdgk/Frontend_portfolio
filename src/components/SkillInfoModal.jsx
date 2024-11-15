@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { SkillInfoData } from "../assets/skillInfoData";
+import { SkillInfoData } from "../assets/skillInfoData"; // skill 정보
 
 const ModalWrapper = styled.div`
   position: fixed;
