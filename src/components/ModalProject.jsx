@@ -14,6 +14,7 @@ const ModalWrapper = styled.div`
   align-items: center;
   z-index: 100;
   @media screen and (max-width: 769px) {
+    width: 100%;
   }
   @media screen and (max-width: 390px) {
   }
@@ -29,10 +30,10 @@ const Inner = styled.div`
   display: flex;
   align-items: center;
   @media screen and (max-width: 769px) {
-    width: 70%;
+    width: 90%;
   }
   @media screen and (max-width: 390px) {
-    width: 85%;
+    width: 90%;
     height: 300px;
   }
 `;
@@ -45,7 +46,9 @@ const ProjectWrap = styled.div`
     align-items: center;
     margin-left: 10px;
     @media screen and (max-width: 390px) {
-      gap: 10px;
+      width: 85%;
+      display: flex;
+      justify-content: center;
     }
   }
 `;
@@ -55,6 +58,9 @@ const DataWrap = styled.div`
   display: flex;
   flex-direction: column;
   margin-right: 30px;
+  @media screen and (max-width: 390px) {
+    margin-right: 10px;
+  }
   img {
     width: 300px;
     height: 400px;
@@ -68,13 +74,19 @@ const DataWrap = styled.div`
 const ProjectItem = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 15px;
+  @media screen and (max-width: 390px) {
+    gap: 10px;
+  }
 `;
 
 const ProjectDesc = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
+  @media screen and (max-width: 390px) {
+    gap: 10px;
+  }
 `;
 
 const Name = styled.span`
@@ -82,7 +94,7 @@ const Name = styled.span`
   font-weight: bold;
   display: flex;
   @media screen and (max-width: 390px) {
-    font-size: 16px;
+    font-size: 18px;
   }
 `;
 
@@ -91,7 +103,7 @@ const Git = styled.p`
   font-size: 20px;
   display: flex;
   @media screen and (max-width: 390px) {
-    font-size: 16px;
+    font-size: 14px;
   }
 `;
 
@@ -100,7 +112,7 @@ const Final = styled.p`
   font-size: 20px;
   display: flex;
   @media screen and (max-width: 390px) {
-    font-size: 16px;
+    font-size: 14px;
   }
 `;
 
@@ -108,18 +120,23 @@ const Desc = styled.span`
   width: 22%;
   font-size: 20px;
   @media screen and (max-width: 390px) {
-    font-size: 16px;
+    font-size: 14px;
+    width: 25%;
   }
 `;
 const Skill = styled.span`
   width: 100%;
-  margin-top: 120px;
+  margin-top: 80px;
   font-size: 20px;
   border-radius: 8px;
   padding: 6px 8px;
   border: 1px solid #ccc;
   @media screen and (max-width: 390px) {
-    font-size: 16px;
+    font-size: 12px;
+    margin-top: 35px;
+    width: 100%;
+    border: 1px solid ${(props) => props.theme.borderColor};
+    color: ${(props) => props.theme.borderColor};
   }
 `;
 
@@ -129,11 +146,11 @@ const CloseBtn = styled.div`
   right: 29%;
   bottom: 25%;
   @media screen and (max-width: 769px) {
-    right: 20%;
-    bottom: 32%;
+    right: 8%;
+    bottom: 23%;
   }
   @media screen and (max-width: 390px) {
-    right: 13%;
+    right: 8%;
     bottom: 32%;
   }
   button {

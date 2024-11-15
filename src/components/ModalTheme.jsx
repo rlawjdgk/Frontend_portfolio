@@ -13,16 +13,15 @@ const Wrapper = styled.div`
     width: 100%;
     height: auto;
     position: fixed;
-    bottom: 285px;
+    bottom: 225px;
     left: 55%;
     transform: translateX(-50%);
   }
-
   @media screen and (max-width: 390px) {
     width: 100%;
     height: auto;
     position: fixed;
-    bottom: 285px;
+    bottom: 230px;
     left: 55%;
     transform: translateX(-50%);
   }

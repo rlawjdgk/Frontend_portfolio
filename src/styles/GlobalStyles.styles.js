@@ -22,6 +22,7 @@ body {
     height: 100%;
     background: ${(props) => props.theme.bgColor};
     color: ${(props) => props.theme.textColor};
+    font-family: "Noto Sans", sans-serif;
 }
 
 :root {

@@ -5,7 +5,8 @@ import { FaRegUser } from "react-icons/fa";
 import { SlChart } from "react-icons/sl";
 import { TiDocument } from "react-icons/ti";
 import { IoMailOutline, IoColorWandOutline } from "react-icons/io5";
-import ModalTheme from "./ModalTheme"; // 모달 컴포넌트
+import { SiAboutdotme } from "react-icons/si";
+import ModalTheme from "./ModalTheme";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll"; // react-scroll 라이브러리
 
@@ -27,8 +28,7 @@ const Wrapper = styled.div`
   }
   @media screen and (max-width: 390px) {
     width: 80%;
-    height: 7%;
-    padding-top: 15px;
+    padding-top: 10px;
     padding-bottom: 40px;
     cursor: pointer;
   }
@@ -59,8 +59,7 @@ const Header = styled.header`
       height: 100%;
       cursor: pointer;
       &:hover {
-        background: ${(props) => props.theme.mobileColor};
-        border-radius: 100%;
+        color: ${(props) => props.theme.mobileColor};
         cursor: pointer;
       }
       @media screen and (max-width: 390px) {
@@ -81,8 +80,9 @@ const Underline = styled(motion.div)`
 `;
 
 const tabs = [
+  { id: "Profile", icon: <FaRegUser /> },
   { id: "Home", icon: <RiHomeLine /> },
-  { id: "AboutMe", icon: <FaRegUser /> },
+  { id: "AboutMe", icon: <SiAboutdotme /> },
   { id: "Skills", icon: <SlChart /> },
   { id: "Project", icon: <TiDocument /> },
   { id: "Contact", icon: <IoMailOutline /> },

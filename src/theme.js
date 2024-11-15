@@ -7,7 +7,7 @@ export const lightTheme = {
   iconColor: "#111111",
   borderColor: "#ccc",
   contactColor: "#EFF4FD",
-  mobileColor: "#DFDDF3",
+  mobileColor: "#624e88",
 };
 
 export const darkTheme = {
