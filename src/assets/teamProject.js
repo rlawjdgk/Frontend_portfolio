@@ -1,0 +1,26 @@
+export const teamProject = [
+  {
+    name: "Temu Clone 1차 팀프로젝트",
+    image: "../public/img/test1.jpg",
+    desc: "프로젝트 1 설명",
+    skillOne: "../public/img/html.png",
+    skillTwo: "../public/img/css.png",
+    skillThree: "../public/img/javascript.png",
+    firstUrl: "https://github.com/u-ulim/teamproject-temu",
+    firstUrlImage: "../public/img/git.png",
+    secondUrl: "https://example.com/demo1",
+    secondUrlImage: "../public/img/firebase.png",
+  },
+  {
+    name: "Facebook Clone 2차 팀프로젝트",
+    image: "../public/img/test1.jpg",
+    desc: "프로젝트 2 설명",
+    skillOne: "../public/img/react.png",
+    skillTwo: null,
+    skillThree: null,
+    firstUrl: "https://github.com/yerixx/Teamproject_Facebook_EZ",
+    firstUrlImage: "../public/img/git.png",
+    secondUrl: "https://example.com/demo1",
+    secondUrlImage: "../public/img/react.png",
+  },
+];

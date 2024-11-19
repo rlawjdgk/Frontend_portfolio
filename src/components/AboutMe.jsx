@@ -42,17 +42,46 @@ const SubTitle = styled.div`
   }
 `;
 
+const Text = styled.div`
+  font-size: 23px;
+  font-weight: 400;
+  color: ${(props) => props.theme.textColor};
+  line-height: 1.4;
+  margin-bottom: 100px;
+  & > span {
+    font-weight: 700;
+  }
+  @media screen and (max-width: 769px) {
+    font-size: 16px;
+  }
+`;
+
 const Info = styled.div`
   display: flex;
+  gap: 300px;
+`;
+
+const MyContact = styled.div`
+  display: flex;
   flex-direction: column;
-  gap: 20px;
-  margin-bottom: 80px;
+  gap: 30px;
   .name {
-    font-size: 20px;
     color: ${(props) => props.theme.textColor};
+    .item {
+      width: 40%;
+      display: flex;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: bold;
+      border: 1px solid ${(props) => props.theme.borderColor};
+      border-radius: 30px;
+      padding: 10px 16px;
+      margin-bottom: 15px;
+    }
     span {
-      font-size: 22px;
+      font-size: 20px;
       color: ${(props) => props.theme.textColor};
+      padding-left: 16px;
       @media screen and (max-width: 769px) {
         font-size: 20px;
       }
@@ -62,49 +91,109 @@ const Info = styled.div`
     }
   }
   .phone {
-    font-size: 20px;
     color: ${(props) => props.theme.textColor};
+    .item {
+      width: 40%;
+      font-size: 20px;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      border: 1px solid ${(props) => props.theme.borderColor};
+      border-radius: 30px;
+      padding: 10px 16px;
+      margin-bottom: 15px;
+    }
     span {
-      font-size: 22px;
+      font-size: 20px;
       color: ${(props) => props.theme.textColor};
+      padding-left: 16px;
     }
   }
   .mail {
-    font-size: 20px;
     color: ${(props) => props.theme.textColor};
-    span {
-      font-size: 22px;
-      color: ${(props) => props.theme.textColor};
+    .item {
+      width: 40%;
+      font-size: 20px;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      border: 1px solid ${(props) => props.theme.borderColor};
+      border-radius: 30px;
+      padding: 10px 16px;
+      margin-bottom: 15px;
     }
-  }
-  .major {
-    font-size: 20px;
-    color: ${(props) => props.theme.textColor};
     span {
-      font-size: 22px;
+      font-size: 20px;
       color: ${(props) => props.theme.textColor};
-    }
-  }
-  .mbti {
-    font-size: 20px;
-    color: ${(props) => props.theme.textColor};
-    span {
-      font-size: 22px;
-      color: ${(props) => props.theme.textColor};
+      padding-left: 16px;
     }
   }
 `;
 
-const Text = styled.div`
-  font-size: 23px;
-  font-weight: 400;
-  color: ${(props) => props.theme.textColor};
-  line-height: 1.4;
-  & > span {
-    font-weight: 700;
+const MyEtcInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  .school {
+    color: ${(props) => props.theme.textColor};
+    .item {
+      width: 43%;
+      font-size: 20px;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      border: 1px solid ${(props) => props.theme.borderColor};
+      border-radius: 30px;
+      padding: 10px 16px;
+      margin-bottom: 15px;
+    }
+    span {
+      font-size: 20px;
+      color: ${(props) => props.theme.textColor};
+      padding-left: 20px;
+    }
   }
-  @media screen and (max-width: 769px) {
-    font-size: 16px;
+  .workExperience {
+    color: ${(props) => props.theme.textColor};
+    .item {
+      width: 64%;
+      font-size: 20px;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      border: 1px solid ${(props) => props.theme.borderColor};
+      border-radius: 30px;
+      padding: 10px 16px;
+      margin-bottom: 15px;
+    }
+    .date {
+      font-size: 20px;
+      padding-left: 20px;
+      & > span {
+        font-weight: bold;
+        color: ${(props) => props.theme.nameWrap};
+        margin-right: 10px;
+      }
+    }
+  }
+  .mbti {
+    color: ${(props) => props.theme.textColor};
+    .item {
+      width: 30%;
+      font-size: 20px;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      border: 1px solid ${(props) => props.theme.borderColor};
+      border-radius: 30px;
+      padding: 10px 16px;
+      margin-bottom: 15px;
+    }
+    span {
+      font-size: 20px;
+      color: ${(props) => props.theme.textColor};
+      padding-left: 20px;
+    }
   }
 `;
 
@@ -118,33 +207,6 @@ const AboutMe = () => {
           </span>
           <span>About Me</span>
         </SubTitle>
-        <Info>
-          <div className="name">
-            Name
-            <br />
-            <span>김정하</span>
-          </div>
-          <div className="phone">
-            Phone
-            <br />
-            <span>010-7546-3273</span>
-          </div>
-          <div className="mail">
-            Mail
-            <br />
-            <span>gloria0205p0@naver.com</span>
-          </div>
-          <div className="major">
-            Major
-            <br />
-            <span>메이크업 학과</span>
-          </div>
-          <div className="mbti">
-            Mbti
-            <br />
-            <span>INTJ</span>
-          </div>
-        </Info>
         <Text>
           안녕하세요. 프론트엔드 개발자 <span>김정하</span>입니다. <br />
           최신 웹 기술을 활용해 사용자 경험을 최우선으로 고려하며,
@@ -152,6 +214,39 @@ const AboutMe = () => {
           있습니다. <br /> 다양한 프로젝트를 통해 창의적이고 효율적인 솔루션을
           제공하고, 항상 새로운 도전을 추구합니다.
         </Text>
+        <Info>
+          <MyContact>
+            <div className="name">
+              <div className="item">Name</div>
+              <span>김정하</span>
+            </div>
+            <div className="phone">
+              <div className="item"> Phone</div>
+              <span>010-7546-3273</span>
+            </div>
+            <div className="mail">
+              <div className="item"> Mail</div>
+              <span>gloria0205p0@naver.com</span>
+            </div>
+          </MyContact>
+          <MyEtcInfo>
+            <div className="school">
+              <div className="item">Education</div>
+              <span>정화예술대학교 메이크업학과 졸업</span>
+            </div>
+            <div className="workExperience">
+              <div className="item"> Work Experience</div>
+              <div className="date">
+                <span> 2023 - 2024</span>
+                Makeup Forever Sales
+              </div>
+            </div>
+            <div className="mbti">
+              <div className="item">MBTI</div>
+              <span>INTJ</span>
+            </div>
+          </MyEtcInfo>
+        </Info>
       </Inner>
     </Wrapper>
   );

@@ -1,26 +1,20 @@
-import React, { useState } from "react"; // useState 추가
+import React, { useState } from "react";
 import styled from "styled-components";
 import { IoPawSharp } from "react-icons/io5";
-import { SkillData } from "../assets/skillData";
+import { SkillData1, SkillData2, SkillData3 } from "../assets/skillData";
 import SkillInfoModal from "./SkillInfoModal";
 
 const Wrapper = styled.div`
   width: 100%;
-  height: 100vh;
-  @media screen and (max-width: 769px) {
-  }
+  height: auto;
 `;
 
 const Inner = styled.div`
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   padding-top: 120px;
   @media screen and (max-width: 769px) {
-    padding-top: 0;
-  }
-  @media screen and (max-width: 390px) {
     padding-top: 0;
   }
 `;
@@ -41,18 +35,20 @@ const SubTitle = styled.div`
     align-items: center;
     margin-right: 8px;
   }
-  @media screen and (max-width: 769px) {
-    margin-top: 0px;
-    padding-top: 0px;
-  }
+`;
+
+const SectionTitle = styled.h2`
+  font-size: 24px;
+  margin-top: 50px;
+  color: ${(props) => props.theme.nameWrap};
+  margin-bottom: 20px;
 `;
 
 const SkillWrap = styled.div`
-  width: 900px;
+  width: 100%;
   flex-wrap: wrap;
   display: flex;
-  margin-top: 40px;
-  gap: 30px;
+  gap: 20px;
   @media screen and (max-width: 769px) {
     width: 770px;
   }
@@ -60,76 +56,58 @@ const SkillWrap = styled.div`
     width: 365px;
   }
   .skillItem {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 130px;
     border: 1px solid ${(props) => props.theme.borderColor};
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 40px;
-    transition: all 0.7s;
-    cursor: pointer; // 마우스 커서를 포인터로 변경
+    gap: 20px;
+    cursor: pointer;
     &:hover {
-      scale: 1.2;
+      scale: 1.1;
     }
     @media screen and (max-width: 769px) {
       width: 160px;
       height: 160px;
-      padding-top: 20px;
-      gap: 20px;
     }
     @media screen and (max-width: 390px) {
       width: 25%;
       height: 120px;
-      padding-top: 15px;
-      gap: 20px;
     }
   }
   .data {
-    width: 64px;
-    height: 64px;
+    width: 30px;
+    height: 30px;
     @media screen and (max-width: 390px) {
       width: 30px;
       height: 30px;
-    }
-  }
-  span {
-    font-size: 24px;
-    @media screen and (max-width: 769px) {
-      font-size: 16px;
-    }
-    @media screen and (max-width: 390px) {
-      font-size: 14px;
     }
   }
 `;
 
 const Skills = () => {
   const [selectedSkill, setSelectedSkill] = useState(null);
-  // 선택한 기술(skill)의 상태를 관리하는 변수
-  // 초기값은 `null`로 설정되어 기술이 선택되지 않은 상태
-
   const [isModalOpen, setIsModalOpen] = useState(false);
-  // 모달 창의 열림/닫힘 상태를 관리하는 변수
-  // 초기값은 `false`로 설정되어 모달이 닫힌 상태
 
   const openModal = (skill) => {
     setSelectedSkill(skill);
-    // 선택된 기술(skill)을 상태에 저장
-
     setIsModalOpen(true);
-    // 모달을 열기 위해 `isModalOpen`을 `true`로 설정
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
-    // 모달을 닫기 위해 `isModalOpen`을 `false`로 설정
-
     setSelectedSkill(null);
-    // 모달을 닫을 때 선택된 기술을 초기화 (null로 설정)
   };
+
+  // 섹션 데이터 배열
+  const sections = [
+    { title: "Frontend Skills", data: SkillData1 },
+    { title: "Backend Skills", data: SkillData2 },
+    { title: "Other Skills", data: SkillData3 },
+  ];
 
   return (
     <Wrapper>
@@ -140,21 +118,26 @@ const Skills = () => {
           </span>
           <span>My Skills</span>
         </SubTitle>
-        <SkillWrap>
-          {SkillData.map((skill) => (
-            <div
-              className="skillItem"
-              key={skill.id}
-              onClick={() => openModal(skill)} // 클릭 시 모달 열기
-            >
-              <img className="data" src={skill.image} alt={skill.name} />
-              <span>{skill.name}</span>
-            </div>
-          ))}
-        </SkillWrap>
+        {sections.map((section, index) => (
+          <div key={index}>
+            <SectionTitle>{section.title}</SectionTitle>
+            <SkillWrap>
+              {section.data.map((skill) => (
+                <div
+                  className="skillItem"
+                  key={skill.id}
+                  onClick={() => openModal(skill)}
+                >
+                  <img className="data" src={skill.image} alt={skill.name} />
+                  <span>{skill.name}</span>
+                </div>
+              ))}
+            </SkillWrap>
+          </div>
+        ))}
       </Inner>
       {isModalOpen && (
-        <SkillInfoModal skill={selectedSkill} onClose={closeModal} /> // 모달 렌더링
+        <SkillInfoModal skill={selectedSkill} onClose={closeModal} />
       )}
     </Wrapper>
   );

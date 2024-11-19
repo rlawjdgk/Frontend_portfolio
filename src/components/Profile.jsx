@@ -119,8 +119,8 @@ const Sns = styled.div`
   display: flex;
   margin-top: 25px;
   .icon {
-    width: 50px;
-    height: 50px;
+    width: 52px;
+    height: 52px;
     border: 1px solid ${(props) => props.theme.textColor};
     color: ${(props) => props.theme.iconColor};
     border-radius: 20px;
@@ -142,7 +142,7 @@ const Sns = styled.div`
 `;
 
 const Tab = styled(Link)`
-  width: 305px;
+  width: 320px;
   height: 62px;
   border-radius: 30px;
   background: ${(props) => props.theme.btnColor};

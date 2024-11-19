@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { IoColorWandOutline } from "react-icons/io5";
 import ModalTheme from "./ModalTheme"; // 모달 컴포넌트 가져오기
-import { motion } from "framer-motion";
 import { Link } from "react-scroll"; // react-scroll 라이브러리
 
 const Wrapper = styled.div`
   width: 100%;
-  height: 100px;
+  height: 90px;
   position: fixed;
   background: ${(props) => props.theme.bgColor};
   color: ${(props) => props.theme.textColor};
@@ -20,26 +19,12 @@ const Wrapper = styled.div`
 const DesktopHeader = styled.header`
   width: 100%;
   height: 100%;
-  font-size: 22px;
+  font-size: 20px;
   display: flex;
   align-items: center;
   gap: 50px;
-  padding: 0 26%;
+  padding: 0 26.5%;
   position: relative;
-  .menu {
-    color: ${(props) => props.theme.textColor};
-    display: flex;
-    align-items: center;
-    position: relative;
-    padding: 8px;
-    transition: all 0.7s ease;
-    cursor: pointer;
-    &:hover {
-      border: 1px solid ${(props) => props.theme.borderColor};
-      border-radius: 20px;
-      padding: 8px 16px;
-    }
-  }
   .colorTheme {
     font-size: 22px;
     display: flex;
@@ -49,61 +34,71 @@ const DesktopHeader = styled.header`
   }
 `;
 
-const Underline = styled(motion.div)`
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 2px;
-  background: ${(props) => props.theme.accentColor};
-  border-radius: 2px;
+const StyledLink = styled(Link)`
+  color: ${(props) => props.theme.textColor};
+  padding: 8px;
+  cursor: pointer;
+  text-decoration: none; /* 기본 링크 밑줄 제거 */
+  position: relative; /* ::after 배치를 위해 position 설정 */
+  transition: color 0.3s ease;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: ${(props) => props.theme.borderColor};
+    transition: width 0.5s ease; /* width에 애니메이션 추가 */
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+
+  &.selected::after {
+    width: 100%;
+  }
 `;
 
-const tabs = ["Home", "AboutMe", "Skills", "Project", "Contact"];
-// 네비게이션 메뉴 항목의 이름을 배열로 정의
-// 이 배열은 각각의 탭 이름을 나타냄
+const tabs = [
+  "Home",
+  "AboutMe",
+  "Skills",
+  "Team Project",
+  "Project",
+  "Contact",
+];
 
 const Header = ({ changeTheme }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  // 모달 창의 열림/닫힘 상태를 관리하는 상태 변수
-  // 초기값은 false (모달이 닫힌 상태)
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
-  // 현재 선택된 탭을 관리하는 상태 변수
-  // 초기값은 tabs 배열의 첫 번째 값 ("Home")
 
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
-    // 모달 창의 상태를 현재 상태의 반대값으로 변경
-    // true -> false, false -> true
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
-    // 모달 창을 닫는 함수 (isModalOpen 상태를 false로 설정)
   };
 
   return (
     <Wrapper>
       <DesktopHeader>
         {tabs.map((tab) => (
-          <Link
+          <StyledLink
             key={tab}
-            className={`menu ${selectedTab === tab ? "selected" : ""}`}
+            className={selectedTab === tab ? "selected" : ""}
             to={tab.replace(" ", "")} // 공백 제거
             spy={true}
             smooth={true}
             duration={500}
-            onClick={() => setSelectedTab(tab)}
+            offset={15} // 헤더 높이만큼 오프셋 설정
+            onSetActive={() => setSelectedTab(tab)} // 해당 섹션이 활성화되면 selectedTab 상태 업데이트
           >
             {tab}
-            {selectedTab === tab && (
-              <Underline
-                layoutId="underline"
-                initial={{ width: 0 }}
-                animate={{ width: "100%" }}
-                transition={{ duration: 0.3 }}
-              />
-            )}
-          </Link>
+          </StyledLink>
         ))}
         <div className="colorTheme" onClick={toggleModal}>
           <IoColorWandOutline />

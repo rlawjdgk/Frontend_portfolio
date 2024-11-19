@@ -8,6 +8,7 @@ import Projects from "../components/Projects";
 import Contact from "../components/Contact";
 import SkillInfoModal from "../components/SkillInfoModal";
 import ModalProject from "../components/ModalProject";
+import TeamProject from "../components/TeamProject";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -58,6 +59,7 @@ const Main = () => {
         <AboutMe />
         <SkillInfoModal />
         <Skills />
+        <TeamProject />
         <ModalProject />
         <MobileRight>
           <Projects />
