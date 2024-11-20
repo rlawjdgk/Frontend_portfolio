@@ -5,7 +5,7 @@ import emailjs from "emailjs-com";
 
 const Wrapper = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 100%;
 `;
 
 const Inner = styled.div`

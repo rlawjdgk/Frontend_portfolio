@@ -5,7 +5,7 @@ import { teamProject } from "../assets/teamProject"; // teamProject 데이터 �
 
 const Wrapper = styled.div`
   width: 100%;
-  min-height: 100vh; /* 최소 높이를 100vh로 설정 */
+  height: auto; /* 최소 높이를 100vh로 설정 */
   padding: 0 20px; /* 좌우 여백 추가 */
   box-sizing: border-box;
 `;
