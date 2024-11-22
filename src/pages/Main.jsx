@@ -24,8 +24,6 @@ const Wrapper = styled.div`
 const Right = styled.div`
   width: calc(100% - 500px);
   height: 100%;
-  scroll-behavior: smooth;
-
   @media screen and (max-width: 769px) {
     width: 100%;
   }
@@ -34,6 +32,8 @@ const Right = styled.div`
 const RightWrap = styled.div`
   margin-top: 50px;
   @media screen and (max-width: 769px) {
+    height: 100%;
+    margin-top: 100px;
   }
 `;
 
@@ -41,10 +41,10 @@ const MobileRight = styled.div`
   @media screen and (max-width: 769px) {
     display: flex;
     flex-direction: column;
-    gap: 750px;
+    gap: 80px;
   }
   @media screen and (max-width: 390px) {
-    gap: 1350px;
+    gap: 0;
   }
 `;
 

@@ -38,9 +38,9 @@ const Tab = styled(Link)`
   color: ${(props) => props.theme.textColor};
   padding: 8px;
   text-decoration: none;
-  position: relative;
+  position: relative; /* ::after 배치를 위해 position 설정 */
+  transition: color 0.3s ease;
   cursor: pointer;
-  transition: color 0.5s ease;
   &::after {
     content: "";
     position: absolute;
@@ -49,10 +49,11 @@ const Tab = styled(Link)`
     width: 0;
     height: 2px;
     background-color: ${(props) => props.theme.borderColor};
-    transition: width 0.5s ease;
+    transition: width 0.3s ease; /* width에 애니메이션 추가 */
   }
   &.selected::after {
     width: 100%;
+    background-color: ${(props) => props.theme.borderColor};
   }
 `;
 
@@ -77,9 +78,9 @@ const Header = ({ changeTheme }) => {
     setIsModalOpen(false);
   };
 
-  const handleTabClick = (tab) => {
-    setSelectedTab(tab); // 탭 클릭 시 선택된 탭 업데이트
-  };
+  // const handleTabClick = (tab) => {
+  //   setSelectedTab(tab); // 탭 클릭 시 선택된 탭 업데이트
+  // };
 
   return (
     <Wrapper>
@@ -88,13 +89,9 @@ const Header = ({ changeTheme }) => {
           <Tab
             key={tab}
             className={selectedTab === tab ? "selected" : ""}
-            to={tab.replace(" ", "")} // 공백 제거
-            spy={true} // 스크롤 감지 활성화
-            smooth={true}
-            duration={1000}
-            offset={0} // 헤더 높이만큼 오프셋 조정 (음수 값으로 테스트)
-            onSetActive={() => setSelectedTab(tab)} // 스크롤 시 활성화 시 탭 업데이트
-            onClick={() => handleTabClick(tab)} // 클릭 시 탭 업데이트
+            to={tab.replace(" ", "")} // 공백 제거와 대소문자 일치
+            spy={true}
+            onSetActive={() => setSelectedTab(tab)}
           >
             {tab}
           </Tab>

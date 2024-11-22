@@ -6,8 +6,6 @@ import { teamProject } from "../assets/teamProject"; // teamProject 데이터 �
 const Wrapper = styled.div`
   width: 100%;
   height: auto; /* 최소 높이를 100vh로 설정 */
-  padding: 0 20px; /* 좌우 여백 추가 */
-  box-sizing: border-box;
 `;
 
 const Inner = styled.div`
@@ -17,6 +15,7 @@ const Inner = styled.div`
   padding-top: 120px;
   @media screen and (max-width: 769px) {
     padding-top: 0;
+    margin-top: 100px;
   }
 `;
 
@@ -30,8 +29,8 @@ const SubTitle = styled.div`
   align-items: center;
   padding: 6px 10px;
   margin-top: 70px;
-  margin-bottom: 40px;
-  span {
+  margin-bottom: 70px;
+  & > span {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,50 +41,86 @@ const SubTitle = styled.div`
 const TeamWrap = styled.div`
   width: 100%;
   display: flex;
-  flex-direction: column;
-  gap: 40px;
+  gap: 30px;
+  @media screen and (max-width: 769px) {
+    gap: 40px;
+  }
+  @media screen and (max-width: 390px) {
+    flex-direction: column;
+    gap: 0px;
+  }
 `;
 
 const Project = styled.div`
-  width: 70%;
-  border: 1px solid ${(props) => props.theme.borderColor};
-  border-radius: 15px;
-  padding: 20px;
+  position: relative;
+  width: 45%;
   display: flex;
   gap: 20px;
+  @media screen and (max-width: 769px) {
+    gap: 100px;
+  }
+  @media screen and (max-width: 769px) {
+    width: 90%;
+  }
+
   .projectImage {
     img {
-      width: 200px;
-      height: 250px;
+      filter: brightness(50%);
+      width: 470px;
+      height: 400px;
       border-radius: 10px;
+      margin-bottom: 200px;
+      @media screen and (max-width: 769px) {
+        width: 350px;
+        height: 400px;
+      }
     }
   }
 
   .projectDetails {
+    width: 74%;
+    position: absolute;
+    bottom: 34%;
+    left: 4%;
+    color: var(--white-color);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    margin-top: 10px;
-    width: 100%;
+    gap: 20px;
+    @media screen and (max-width: 769px) {
+      width: 100%;
+      font-size: 16px;
+    }
+    p {
+      margin-top: 10px;
+    }
     .projectSkill {
       display: flex;
       justify-content: space-between;
+      margin-bottom: 10px;
+
       .projectEtc {
         display: flex;
         gap: 10px;
-        margin-bottom: 15px;
         img {
           width: 25px;
           height: 25px;
+          @media screen and (max-width: 769px) {
+            width: 28px;
+            height: 28px;
+          }
         }
       }
       .urlImage {
         display: flex;
-        gap: 20px;
+        gap: 10px;
         a {
           img {
             width: 30px;
             height: 30px;
+            @media screen and (max-width: 769px) {
+              width: 28px;
+              height: 28px;
+            }
           }
         }
       }
@@ -111,6 +146,7 @@ const TeamProject = () => {
               </div>
               <div className="projectDetails">
                 <h2>{project.name}</h2>
+                <span>{project.member}</span>
                 <p>{project.desc}</p>
                 <div className="projectSkill">
                   <div className="projectEtc">

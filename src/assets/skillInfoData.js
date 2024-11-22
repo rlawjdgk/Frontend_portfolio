@@ -69,7 +69,7 @@ export const SkillInfoData = [
   {
     id: 12,
     name: "Git",
-    image: "/img/git.png",
+    image: "/img/github.png",
     desc: "Git을 통해 여러 개발자와 협력하는 방법을 배움, 각자의 작업 결과를 통합할 때, 명령어를 사용하여 최신 코드를 공유하고, 변경 사항을 원활하게 관리, 협업 과정에서 발생할 수 있는 코드 충돌을 해결하는 기술을 익힘",
   },
 ];

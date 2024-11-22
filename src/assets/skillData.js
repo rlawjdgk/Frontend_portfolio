@@ -63,6 +63,6 @@ export const SkillData3 = [
   {
     id: 12,
     name: "Git",
-    image: "../public/img/git.png",
+    image: "../public/img/github.png",
   },
 ];

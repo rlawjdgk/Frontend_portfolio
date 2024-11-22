@@ -14,13 +14,15 @@ const Inner = styled.div`
   flex-direction: column;
   padding-top: 120px;
   @media screen and (max-width: 769px) {
-    padding-top: 50px;
+  }
+  @media screen and (max-width: 390px) {
+    padding-top: 90px;
   }
 `;
 
 const SubTitle = styled.div`
   width: 130px;
-  height: 37px;
+  height: 4%;
   border: 1px solid ${(props) => props.theme.borderColor};
   border-radius: 30px;
   display: flex;
@@ -38,7 +40,9 @@ const SubTitle = styled.div`
   @media screen and (max-width: 769px) {
     margin-top: 0;
     margin-bottom: 30px;
-    padding-top: 0px;
+  }
+  @media screen and (max-width: 390px) {
+    height: 15%;
   }
 `;
 
@@ -54,11 +58,21 @@ const Text = styled.div`
   @media screen and (max-width: 769px) {
     font-size: 16px;
   }
+  @media screen and (max-width: 390px) {
+    font-size: 14px;
+  }
 `;
 
 const Info = styled.div`
   display: flex;
   gap: 300px;
+  @media screen and (max-width: 769px) {
+    gap: 100px;
+  }
+  @media screen and (max-width: 390px) {
+    gap: 50px;
+    flex-direction: column;
+  }
 `;
 
 const MyContact = styled.div`
@@ -77,17 +91,18 @@ const MyContact = styled.div`
       border-radius: 30px;
       padding: 10px 16px;
       margin-bottom: 15px;
+      @media screen and (max-width: 390px) {
+        width: 30%;
+        font-size: 16px;
+      }
     }
     span {
       font-size: 20px;
       color: ${(props) => props.theme.textColor};
       padding-left: 16px;
       @media screen and (max-width: 769px) {
-        font-size: 20px;
+        font-size: 16px;
       }
-    }
-    @media screen and (max-width: 76px) {
-      font-size: 16px;
     }
   }
   .phone {
@@ -102,11 +117,18 @@ const MyContact = styled.div`
       border-radius: 30px;
       padding: 10px 16px;
       margin-bottom: 15px;
+      @media screen and (max-width: 390px) {
+        width: 30%;
+        font-size: 16px;
+      }
     }
     span {
       font-size: 20px;
       color: ${(props) => props.theme.textColor};
       padding-left: 16px;
+      @media screen and (max-width: 390px) {
+        font-size: 16px;
+      }
     }
   }
   .mail {
@@ -121,11 +143,18 @@ const MyContact = styled.div`
       border-radius: 30px;
       padding: 10px 16px;
       margin-bottom: 15px;
+      @media screen and (max-width: 390px) {
+        width: 30%;
+        font-size: 16px;
+      }
     }
     span {
       font-size: 20px;
       color: ${(props) => props.theme.textColor};
       padding-left: 16px;
+      @media screen and (max-width: 390px) {
+        font-size: 16px;
+      }
     }
   }
 `;
@@ -146,13 +175,24 @@ const MyEtcInfo = styled.div`
       border-radius: 30px;
       padding: 10px 16px;
       margin-bottom: 15px;
+      @media screen and (max-width: 390px) {
+        width: 35%;
+        font-size: 16px;
+      }
     }
     span {
       font-size: 20px;
       color: ${(props) => props.theme.textColor};
       padding-left: 20px;
+      @media screen and (max-width: 769px) {
+        font-size: 20px;
+      }
+      @media screen and (max-width: 390px) {
+        font-size: 16px;
+      }
     }
   }
+
   .workExperience {
     color: ${(props) => props.theme.textColor};
     .item {
@@ -165,14 +205,24 @@ const MyEtcInfo = styled.div`
       border-radius: 30px;
       padding: 10px 16px;
       margin-bottom: 15px;
+      @media screen and (max-width: 390px) {
+        width: 50%;
+        font-size: 16px;
+      }
     }
     .date {
       font-size: 20px;
       padding-left: 20px;
+      @media screen and (max-width: 390px) {
+        font-size: 16px;
+      }
       & > span {
         font-weight: bold;
         color: ${(props) => props.theme.nameWrap};
         margin-right: 10px;
+        @media screen and (max-width: 390px) {
+          font-size: 16px;
+        }
       }
     }
   }
@@ -188,11 +238,18 @@ const MyEtcInfo = styled.div`
       border-radius: 30px;
       padding: 10px 16px;
       margin-bottom: 15px;
+      @media screen and (max-width: 390px) {
+        width: 25%;
+        font-size: 16px;
+      }
     }
     span {
       font-size: 20px;
       color: ${(props) => props.theme.textColor};
       padding-left: 20px;
+      @media screen and (max-width: 390px) {
+        font-size: 16px;
+      }
     }
   }
 `;

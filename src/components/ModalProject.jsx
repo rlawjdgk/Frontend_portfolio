@@ -26,7 +26,6 @@ const Inner = styled.div`
   height: 550px;
   background: ${(props) => props.theme.bgColor};
   border-radius: 8px;
-  text-align: center;
   display: flex;
   align-items: center;
   @media screen and (max-width: 769px) {
@@ -74,14 +73,13 @@ const DataWrap = styled.div`
 const ProjectItem = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
   @media screen and (max-width: 390px) {
     gap: 10px;
   }
 `;
 
 const ProjectDesc = styled.div`
-  display: flex;
   flex-direction: column;
   gap: 15px;
   @media screen and (max-width: 390px) {
@@ -111,26 +109,30 @@ const Final = styled.p`
   width: 100%;
   font-size: 20px;
   display: flex;
+  margin-bottom: 30px;
   @media screen and (max-width: 390px) {
     font-size: 14px;
   }
 `;
 
 const Desc = styled.span`
-  width: 22%;
-  font-size: 20px;
+  width: 100%;
+  font-size: 18px;
   @media screen and (max-width: 390px) {
     font-size: 14px;
     width: 25%;
   }
 `;
+
 const Skill = styled.span`
-  width: 100%;
-  margin-top: 80px;
-  font-size: 20px;
-  border-radius: 8px;
-  padding: 6px 8px;
-  border: 1px solid #ccc;
+  width: 55%;
+  display: flex;
+  gap: 10px;
+  margin-top: 50px;
+  img {
+    width: 30px;
+    height: 30px;
+  }
   @media screen and (max-width: 390px) {
     font-size: 12px;
     margin-top: 35px;
@@ -166,18 +168,11 @@ const CloseBtn = styled.div`
     }
   }
 `;
+
 const ModalProject = ({ project, onClose }) => {
-  // - project: 모달에 표시할 프로젝트 데이터 (props로 전달받음)
-  // - onClose: 모달 닫기 동작을 처리하는 함수 (props로 전달받음)
-
   if (!project) return null;
-  // project 값이 없으면 (null 또는 undefined) 컴포넌트 렌더링 중단
-  // 모달을 열 프로젝트가 선택되지 않았을 때 아무것도 표시하지 않음
 
-  // 선택한 skill에 해당하는 추가 정보 가져오기
   const projectDetails = ProjectData.find((info) => info.id === project.id);
-  // ProjectData 배열에서 선택된 project의 id와 일치하는 데이터를 찾음
-  // projectDetails는 해당 프로젝트의 상세 정보를 포함
 
   return (
     <ModalWrapper>
@@ -193,7 +188,17 @@ const ModalProject = ({ project, onClose }) => {
                 <Git>Git URL: {projectDetails.gitURL}</Git>
                 <Final>Final URL: {projectDetails.finalURL}</Final>
                 <Desc>{projectDetails.desc}</Desc>
-                <Skill>{projectDetails.skill}</Skill>
+                <Skill>
+                  {projectDetails.skillFirst && (
+                    <img src={projectDetails.skillFirst} alt="skillFirst" />
+                  )}
+                  {projectDetails.skillSecond && (
+                    <img src={projectDetails.skillSecond} alt="skillSecond" />
+                  )}
+                  {projectDetails.skillThird && (
+                    <img src={projectDetails.skillThird} alt="skillThird" />
+                  )}
+                </Skill>
               </ProjectDesc>
             </ProjectItem>
           </div>

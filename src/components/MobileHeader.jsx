@@ -14,7 +14,7 @@ const Wrapper = styled.div`
   display: none;
   @media screen and (max-width: 769px) {
     width: fit-content;
-    height: 5%;
+    height: 8%;
     border-radius: 30px;
     display: block;
     position: fixed;

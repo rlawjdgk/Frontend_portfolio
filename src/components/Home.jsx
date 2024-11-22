@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { IoPawSharp } from "react-icons/io5";
 import { motion } from "framer-motion";
-
 const Wrapper = styled.div`
   width: 100%;
   height: 100vh;
@@ -10,7 +9,6 @@ const Wrapper = styled.div`
   flex-direction: column; // Default to column for mobile
   align-items: center;
 `;
-
 const Inner = styled.div`
   width: 100%;
   height: 100%;
@@ -21,9 +19,15 @@ const Inner = styled.div`
   @media screen and (max-width: 769px) {
     height: 100%;
     padding-top: 10px;
+    display: inherit;
+    justify-content: inherit;
+    margin-top: 300px;
+  }
+  @media screen and (max-width: 390px) {
+    height: 30%;
+    margin-top: 250px;
   }
 `;
-
 const SubTitle = styled.div`
   width: 190px;
   height: 4%;
@@ -37,6 +41,9 @@ const SubTitle = styled.div`
   @media screen and (max-width: 769px) {
     margin-bottom: 23px;
   }
+  @media screen and (max-width: 390px) {
+    height: 15%;
+  }
   span {
     display: flex;
     justify-content: center;
@@ -44,7 +51,6 @@ const SubTitle = styled.div`
     margin-right: 8px;
   }
 `;
-
 const MainTitle = styled(motion.div)`
   width: 100%;
   font-size: 75px;
@@ -58,8 +64,10 @@ const MainTitle = styled(motion.div)`
   @media screen and (max-width: 769px) {
     font-size: 30px;
   }
+  @media screen and (max-width: 390px) {
+    font-size: 26px;
+  }
 `;
-
 const Home = () => {
   return (
     <Wrapper id="Home">
@@ -72,9 +80,12 @@ const Home = () => {
         </SubTitle>
         <motion.div>
           <MainTitle
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ type: "spring", duration: 1 }}
+            animate={{ opacity: [1.5, 0.2, 1.5] }} // 깜빡이는 효과
+            transition={{
+              repeat: Infinity, // 무한 반복
+              duration: 5, // 깜빡이는 시간
+              ease: "easeInOut",
+            }}
           >
             I'm a Frontend Developer <br /> who prioritizes user experience
           </MainTitle>
@@ -83,5 +94,4 @@ const Home = () => {
     </Wrapper>
   );
 };
-
 export default Home;

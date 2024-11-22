@@ -13,9 +13,7 @@ const Inner = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding-top: 120px;
   @media screen and (max-width: 769px) {
-    padding-top: 0;
   }
 `;
 
@@ -28,7 +26,7 @@ const SubTitle = styled.div`
   justify-content: center;
   align-items: center;
   padding: 6px 10px;
-  margin-top: 100px;
+  margin-top: 80px;
   span {
     display: flex;
     justify-content: center;
@@ -162,9 +160,9 @@ const Contact = () => {
   };
 
   return (
-    <Wrapper>
+    <Wrapper id="Contact">
       <Inner>
-        <SubTitle id="Contact">
+        <SubTitle>
           <span>
             <IoPawSharp />
           </span>
