@@ -70,6 +70,8 @@ const Project = styled.div`
       height: 400px;
       border-radius: 10px;
       margin-bottom: 200px;
+      object-fit: cover;
+      object-position: top;
       @media screen and (max-width: 769px) {
         width: 350px;
         height: 400px;

@@ -13,6 +13,8 @@ const Inner = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
+
+  padding-top: 120px;
   @media screen and (max-width: 769px) {
   }
 `;
