@@ -12,8 +12,8 @@ const Wrapper = styled.div`
 `;
 
 const Inner = styled.div`
-  width: 400px;
-  height: 820px;
+  width: 300px;
+  height: 650px;
   border: 1px solid ${(props) => props.theme.borderColor};
   border-radius: 30px;
   position: fixed;
@@ -71,6 +71,10 @@ const AnimalImg = styled.div`
 const MyPhoto = styled.div`
   display: flex;
   margin-top: 8px;
+  img {
+    width: 100px;
+    height: 100px;
+  }
 `;
 
 const InfoWrap = styled.div`
