@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { IoPawSharp } from "react-icons/io5";
 import { ProjectData } from "../assets/projectData";
 import ModalProject from "./ModalProject";
-import { style } from "framer-motion/client";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -18,6 +17,9 @@ const Inner = styled.div`
   padding-top: 120px;
   @media screen and (max-width: 769px) {
     padding-top: 0px;
+  }
+  @media screen and (max-width: 769px) {
+    padding-top: 50px;
   }
 `;
 

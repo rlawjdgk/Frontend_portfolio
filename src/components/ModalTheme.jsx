@@ -13,16 +13,16 @@ const Wrapper = styled.div`
     width: 100%;
     height: auto;
     position: fixed;
-    bottom: 225px;
-    left: 55%;
+    bottom: 255px;
+    left: 48.5%;
     transform: translateX(-50%);
   }
   @media screen and (max-width: 390px) {
     width: 100%;
     height: auto;
     position: fixed;
-    bottom: 230px;
-    left: 55%;
+    top: 15%;
+
     transform: translateX(-50%);
   }
 `;
@@ -30,7 +30,7 @@ const Wrapper = styled.div`
 const Inner = styled.div`
   position: absolute;
   top: -20%;
-  right: 3%;
+  right: 3.5%;
   background: white;
   padding: 20px;
   border-radius: 10px;

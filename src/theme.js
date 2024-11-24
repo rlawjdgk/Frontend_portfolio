@@ -8,7 +8,7 @@ export const lightTheme = {
   borderColor: "#ccc",
   contactColor: "#EFF4FD",
   mobileColor: "#624e88",
-  selectedColor: "",
+  mobileHeader: "#ccc",
 };
 
 export const darkTheme = {
@@ -21,7 +21,7 @@ export const darkTheme = {
   borderColor: "#FFD1E3",
   contactColor: "#FFEDF4",
   mobileColor: "#FFD1E3",
-  selectedColor: "",
+  mobileHeader: "#ccc",
 };
 
 export const vintageTheme = {
@@ -34,7 +34,7 @@ export const vintageTheme = {
   borderColor: "#374259",
   contactColor: "#FFEDF4",
   mobileColor: "#F2D8D8",
-  selectedColor: "",
+  mobileHeader: "#ccc",
 };
 
 export const warmTheme = {
@@ -47,5 +47,5 @@ export const warmTheme = {
   borderColor: "#6F4E37",
   contactColor: "#FFF7E5",
   mobileColor: "#FFF2D7",
-  selectedColor: "",
+  mobileHeader: "#ccc",
 };

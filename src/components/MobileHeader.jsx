@@ -1,75 +1,69 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { RiHomeLine } from "react-icons/ri";
-import { FaRegUser } from "react-icons/fa";
-import { SlChart } from "react-icons/sl";
-import { TiDocument } from "react-icons/ti";
-import { IoMailOutline, IoColorWandOutline } from "react-icons/io5";
-import { SiAboutdotme } from "react-icons/si";
+import { IoColorWandOutline } from "react-icons/io5";
+import { FaCircle } from "react-icons/fa";
 import ModalTheme from "./ModalTheme";
 import { motion } from "framer-motion";
-import { Link } from "react-scroll"; // react-scroll 라이브러리
+import { Link } from "react-scroll";
 
+// Wrapper: 모바일 환경에서만 표시되는 컨테이너
 const Wrapper = styled.div`
   display: none;
   @media screen and (max-width: 769px) {
-    width: fit-content;
-    height: 8%;
-    border-radius: 30px;
-    display: block;
+    width: 10%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: fixed;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
+    font-size: 25px;
+    top: 55px;
+    right: -15px;
+    transform: translateX(-30%);
     z-index: 1000;
-    background: #f2efef;
-    padding: 5px 0;
     cursor: pointer;
   }
   @media screen and (max-width: 390px) {
-    width: 80%;
-    padding-top: 10px;
-    padding-bottom: 40px;
-    cursor: pointer;
+    top: 45px;
+    right: -5px;
   }
 `;
 
+// Header: 탭들을 포함하는 컨테이너
 const Header = styled.header`
   @media screen and (max-width: 769px) {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 30px;
-    padding: 0 10px;
-    cursor: pointer;
-    @media screen and (max-width: 390px) {
-      gap: 15px;
-      font-size: 15px;
-      cursor: pointer;
-    }
-    .menu {
-      text-decoration: none;
-      color: var(--black-color);
-      font-size: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 6px;
-      width: 100%;
-      height: 100%;
-      cursor: pointer;
-      &:hover {
-        color: ${(props) => props.theme.mobileColor};
-        cursor: pointer;
-      }
-      @media screen and (max-width: 390px) {
-        font-size: 15px;
-        cursor: pointer;
-      }
-    }
+    width: 100%;
+    height: 100%;
+  }
+  @media screen and (max-width: 390px) {
+    padding: 10px;
+    gap: 25px;
   }
 `;
 
+// Tab: Link 스타일
+const Tab = styled(Link)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15px;
+  height: 15px;
+  color: ${(props) =>
+    props.selected ? props.theme.nameWrap : props.theme.mobileHeader};
+  transition: color 0.7s ease;
+  cursor: pointer;
+
+  &:hover {
+    color: ${(props) => props.theme.nameWrap};
+  }
+`;
+
+// 탭에 underline 애니메이션 효과 추가 (선택된 탭)
 const Underline = styled(motion.div)`
   position: absolute;
   bottom: 0;
@@ -80,43 +74,37 @@ const Underline = styled(motion.div)`
 `;
 
 const tabs = [
-  { id: "Profile", icon: <FaRegUser /> },
-  { id: "Home", icon: <RiHomeLine /> },
-  { id: "AboutMe", icon: <SiAboutdotme /> },
-  { id: "Skills", icon: <SlChart /> },
-  { id: "Project", icon: <TiDocument /> },
-  { id: "Contact", icon: <IoMailOutline /> },
+  { id: "Profile", icon: <FaCircle /> },
+  { id: "AboutMe", icon: <FaCircle /> },
+  { id: "Skills", icon: <FaCircle /> },
+  { id: "TeamProject", icon: <FaCircle /> },
+  { id: "Project", icon: <FaCircle /> },
+  { id: "Contact", icon: <FaCircle /> },
 ];
-// 네비게이션 메뉴 항목을 객체 배열로 정의
-// - 각 객체는 id와 해당 탭에 표시할 아이콘(icon) 컴포넌트를 포함
-// - id: 메뉴 항목의 고유 이름
-// - icon: React 아이콘 컴포넌트 (각 항목에 시각적 아이콘 추가)
 
 const MobileHeader = ({ changeTheme }) => {
-  // 부모 컴포넌트에서 전달받은 changeTheme 함수로 테마 변경 가능
-  const [selectedTab, setSelectedTab] = useState(tabs[0].id);
-  // 현재 선택된 탭의 id를 관리하는 상태 변수
-  // 초기값은 tabs 배열의 첫 번째 항목("Profile")의 id
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  // 모달 창의 열림/닫힘 상태를 관리하는 상태 변수
+  const [selectedTab, setSelectedTab] = useState(tabs[0].id); // 현재 선택된 탭
+  const [isModalOpen, setIsModalOpen] = useState(false); // 모달 상태
+
   const toggleModal = () => {
-    setIsModalOpen(!isModalOpen);
-    // 모달 창의 상태를 현재 상태의 반대값으로 변경
-    // true -> false, false -> true
+    setIsModalOpen(!isModalOpen); // 모달 열고 닫기
   };
 
   return (
     <Wrapper>
+      <a className="menu" onClick={toggleModal}>
+        <IoColorWandOutline />
+      </a>
       <Header>
         {tabs.map((tab) => (
-          <Link
+          <Tab
             key={tab.id}
-            className={`menu ${selectedTab === tab.id ? "selected" : ""}`}
-            to={tab.id}
-            spy={true}
-            smooth={true}
-            duration={500}
-            onClick={() => setSelectedTab(tab.id)}
+            to={tab.id} // 이동하려는 섹션 ID
+            spy={true} // 섹션 감지 활성화
+            smooth={true} // 부드러운 스크롤
+            duration={500} // 스크롤 속도
+            selected={selectedTab === tab.id} // 현재 선택된 탭 여부
+            onSetActive={() => setSelectedTab(tab.id)} // 활성화된 탭 업데이트
           >
             {tab.icon}
             {selectedTab === tab.id && (
@@ -127,13 +115,8 @@ const MobileHeader = ({ changeTheme }) => {
                 transition={{ duration: 0.3 }}
               />
             )}
-          </Link>
+          </Tab>
         ))}
-        <a className="menu" onClick={toggleModal}>
-          <span>
-            <IoColorWandOutline />
-          </span>
-        </a>
       </Header>
       {isModalOpen && <ModalTheme changeTheme={changeTheme} />}
     </Wrapper>

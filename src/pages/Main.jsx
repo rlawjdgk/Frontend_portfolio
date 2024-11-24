@@ -33,7 +33,7 @@ const RightWrap = styled.div`
   margin-top: 50px;
   @media screen and (max-width: 769px) {
     height: 100%;
-    margin-top: 100px;
+    /* margin-top: 100px; */
   }
 `;
 
