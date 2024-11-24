@@ -33,7 +33,7 @@ const Inner = styled.div`
   }
   @media screen and (max-width: 390px) {
     width: 90%;
-    height: 300px;
+    height: 500px;
   }
 `;
 
@@ -45,10 +45,15 @@ const ProjectWrap = styled.div`
     align-items: center;
     margin-left: 10px;
     @media screen and (max-width: 390px) {
-      width: 85%;
+      width: 100%;
       display: flex;
+      flex-direction: column;
       justify-content: center;
+      padding: 15px;
     }
+  }
+  @media screen and (max-width: 390px) {
+    padding: 0 0;
   }
 `;
 
@@ -58,14 +63,14 @@ const DataWrap = styled.div`
   flex-direction: column;
   margin-right: 30px;
   @media screen and (max-width: 390px) {
-    margin-right: 10px;
+    margin-bottom: 10px;
   }
   img {
     width: 300px;
     height: 400px;
     @media screen and (max-width: 390px) {
-      width: 150px;
-      height: 250px;
+      width: 300px;
+      height: 150px;
     }
   }
 `;
@@ -76,6 +81,7 @@ const ProjectItem = styled.div`
   gap: 20px;
   @media screen and (max-width: 390px) {
     gap: 10px;
+    margin-left: 7px;
   }
 `;
 
@@ -84,6 +90,7 @@ const ProjectDesc = styled.div`
   gap: 15px;
   @media screen and (max-width: 390px) {
     gap: 10px;
+    width: 90%;
   }
 `;
 
@@ -91,8 +98,12 @@ const Name = styled.span`
   font-size: 32px;
   font-weight: bold;
   display: flex;
+  @media screen and (max-width: 769px) {
+    font-size: 24px;
+  }
   @media screen and (max-width: 390px) {
     font-size: 18px;
+    width: 90%;
   }
 `;
 
@@ -100,6 +111,9 @@ const Git = styled.p`
   width: 100%;
   font-size: 20px;
   display: flex;
+  @media screen and (max-width: 769px) {
+    font-size: 16px;
+  }
   @media screen and (max-width: 390px) {
     font-size: 14px;
   }
@@ -110,8 +124,12 @@ const Final = styled.p`
   font-size: 20px;
   display: flex;
   margin-bottom: 30px;
+  @media screen and (max-width: 769px) {
+    font-size: 16px;
+  }
   @media screen and (max-width: 390px) {
     font-size: 14px;
+    margin-bottom: 10px;
   }
 `;
 
@@ -120,7 +138,7 @@ const Desc = styled.span`
   font-size: 18px;
   @media screen and (max-width: 390px) {
     font-size: 14px;
-    width: 25%;
+    width: 20%;
   }
 `;
 
@@ -132,13 +150,20 @@ const Skill = styled.span`
   img {
     width: 30px;
     height: 30px;
+    object-fit: cover;
+    object-position: top;
+    @media screen and (max-width: 769px) {
+      width: 25px;
+      height: 25px;
+    }
+  }
+  @media screen and (max-width: 769px) {
+    margin-top: 20px;
   }
   @media screen and (max-width: 390px) {
     font-size: 12px;
-    margin-top: 35px;
+    margin-top: 15px;
     width: 100%;
-    border: 1px solid ${(props) => props.theme.borderColor};
-    color: ${(props) => props.theme.borderColor};
   }
 `;
 
@@ -152,8 +177,8 @@ const CloseBtn = styled.div`
     bottom: 23%;
   }
   @media screen and (max-width: 390px) {
-    right: 8%;
-    bottom: 32%;
+    right: 11%;
+    bottom: 22%;
   }
   button {
     border: none;

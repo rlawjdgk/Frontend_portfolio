@@ -17,6 +17,9 @@ const Inner = styled.div`
     padding-top: 0;
     margin-top: 100px;
   }
+  @media screen and (max-width: 390px) {
+    margin-top: 0px;
+  }
 `;
 
 const SubTitle = styled.div`
@@ -89,6 +92,10 @@ const Project = styled.div`
     flex-direction: column;
     gap: 20px;
     @media screen and (max-width: 769px) {
+      width: 90%;
+      font-size: 16px;
+    }
+    @media screen and (max-width: 390px) {
       width: 100%;
       font-size: 16px;
     }

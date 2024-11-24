@@ -18,7 +18,7 @@ const Inner = styled.div`
   @media screen and (max-width: 769px) {
     padding-top: 0px;
   }
-  @media screen and (max-width: 769px) {
+  @media screen and (max-width: 390px) {
     padding-top: 50px;
   }
 `;
@@ -80,9 +80,10 @@ const ProjectItem = styled.div`
       flex-wrap: wrap;
     }
     @media screen and (max-width: 390px) {
-      width: 45%;
+      width: 43%;
       padding-top: 0px;
-      gap: 20px;
+      gap: 10px;
+      flex-wrap: nowrap;
     }
   }
   .data {
@@ -93,6 +94,7 @@ const ProjectItem = styled.div`
     border-radius: 20px;
     transition: all 0.9s;
     filter: brightness(50%);
+    object-fit: cover;
     &:hover {
       transition: all 0.9s;
       filter: brightness(100%);
@@ -111,11 +113,12 @@ const Span = styled.span`
   @media screen and (max-width: 390px) {
     font-size: 14px;
     text-align: center;
+    width: 178px;
   }
 `;
 
 const ShowMoreButton = styled.button`
-  margin: 60px 0;
+  margin: 30px 0;
   width: 8%;
   padding: 10px 20px;
   font-size: 16px;
@@ -134,6 +137,7 @@ const ShowMoreButton = styled.button`
   @media screen and (max-width: 390px) {
     width: 28%;
     margin-left: 120px;
+    margin-bottom: 0;
   }
 `;
 

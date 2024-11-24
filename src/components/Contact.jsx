@@ -13,9 +13,11 @@ const Inner = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-
   padding-top: 120px;
   @media screen and (max-width: 769px) {
+  }
+  @media screen and (max-width: 390px) {
+    padding-top: 0;
   }
 `;
 
@@ -171,10 +173,10 @@ const Contact = () => {
           <span>Contact</span>
         </SubTitle>
         <ContactForm ref={form} onSubmit={sendEmail}>
-          <NameInput id="user_name" name="user_name" placeholder="Your Name" />
+          <NameInput id="your_name" name="your_name" placeholder="Your Name" />
           <MailInput
-            id="user_email"
-            name="user_mail"
+            id="your_email"
+            name="your_email"
             placeholder="Your Mail or Your Number"
           />
           <MessageInput id="message" name="message" placeholder="Message" />

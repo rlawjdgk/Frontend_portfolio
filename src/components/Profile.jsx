@@ -235,7 +235,7 @@ const Profile = () => {
             </div>
           </NameWrap>
           <MyPhoto>
-            <img src="../public/img/myphoto.png" alt="myphoto" />
+            <img src="/img/myphoto.png" alt="myphoto" />
           </MyPhoto>
           <InfoWrap>
             <Specialization>
