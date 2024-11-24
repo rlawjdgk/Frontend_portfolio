@@ -12,8 +12,8 @@ const Wrapper = styled.div`
 `;
 
 const Inner = styled.div`
-  width: 300px;
-  height: 650px;
+  width: 330px;
+  height: 690px;
   border: 1px solid ${(props) => props.theme.borderColor};
   border-radius: 30px;
   position: fixed;
@@ -35,7 +35,7 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 40px;
+  padding: 15px 20px;
   @media screen and (max-width: 769px) {
     display: flex;
     justify-content: center;
@@ -44,12 +44,13 @@ const Container = styled.div`
 
 const NameWrap = styled.div`
   width: 100%;
+  height: 15%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   .name {
-    font-size: 36px;
-    font-weight: 600;
+    font-size: 30px;
+    font-weight: 700;
     color: ${(props) => props.theme.nameWrap};
   }
   @media screen and (max-width: 769px) {
@@ -72,8 +73,8 @@ const MyPhoto = styled.div`
   display: flex;
   margin-top: 8px;
   img {
-    width: 100px;
-    height: 100px;
+    width: 250px;
+    height: 250px;
   }
 `;
 
@@ -102,7 +103,7 @@ const Specialization = styled.div`
   }
   .job {
     color: ${(props) => props.theme.textColor};
-    font-size: 20px;
+    font-size: 18px;
   }
 `;
 
@@ -115,24 +116,24 @@ const AddressWrap = styled.div`
   }
   .address {
     color: ${(props) => props.theme.textColor};
-    font-size: 20px;
+    font-size: 18px;
   }
 `;
 
 const Sns = styled.div`
   display: flex;
-  margin-top: 25px;
+  margin-top: 20px;
   .icon {
-    width: 52px;
-    height: 52px;
+    width: 45px;
+    height: 45px;
     border: 1px solid ${(props) => props.theme.textColor};
     color: ${(props) => props.theme.iconColor};
-    border-radius: 20px;
+    border-radius: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 13px;
-    font-size: 20px;
+    font-size: 16px;
     cursor: pointer;
     &:hover {
       background: ${(props) => props.theme.btnColor};
@@ -146,12 +147,12 @@ const Sns = styled.div`
 `;
 
 const Tab = styled(Link)`
-  width: 320px;
-  height: 62px;
-  border-radius: 30px;
+  width: 300px;
+  height: 50px;
+  border-radius: 20px;
   background: ${(props) => props.theme.btnColor};
   color: ${(props) => props.theme.btnTextColor};
-  font-size: 20px;
+  font-size: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
