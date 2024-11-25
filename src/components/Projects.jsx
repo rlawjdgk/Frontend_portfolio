@@ -16,7 +16,7 @@ const Inner = styled.div`
   flex-direction: column;
   padding-top: 140px;
   @media screen and (max-width: 769px) {
-    padding-top: 0px;
+    padding-top: 40px;
   }
   @media screen and (max-width: 390px) {
     padding-top: 50px;

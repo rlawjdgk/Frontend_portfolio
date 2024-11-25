@@ -24,7 +24,7 @@ const Inner = styled.div`
   @media screen and (max-width: 769px) {
     width: 100%;
     position: inherit;
-    margin-top: 340px;
+    margin-top: 360px;
     padding: 10px 0;
   }
 `;

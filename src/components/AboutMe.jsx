@@ -6,7 +6,7 @@ const Wrapper = styled.div`
   width: 100%;
   height: 100vh;
   @media screen and (max-width: 769px) {
-    height: 60vh;
+    height: 70vh;
   }
 `;
 
@@ -41,7 +41,7 @@ const SubTitle = styled.div`
     margin-right: 8px;
   }
   @media screen and (max-width: 769px) {
-    height: 4%;
+    height: 6%;
     margin-bottom: 30px;
   }
   @media screen and (max-width: 390px) {
