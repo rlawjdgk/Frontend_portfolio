@@ -30,7 +30,7 @@ const SubTitle = styled.div`
   justify-content: center;
   align-items: center;
   padding: 6px 10px;
-  margin: 30px 0;
+  margin-bottom: 20px;
   span {
     display: flex;
     justify-content: center;
@@ -47,8 +47,8 @@ const ContactForm = styled.form`
 
 const NameInput = styled.textarea`
   width: 30%;
-  height: 45px;
-  padding: 15px;
+  height: 55px;
+  padding: 20px;
   border: none;
   outline: none;
   border-radius: 8px;
@@ -66,8 +66,8 @@ const NameInput = styled.textarea`
 
 const MailInput = styled.textarea`
   width: 30%;
-  height: 45px;
-  padding: 15px;
+  height: 55px;
+  padding: 20px;
   border: none;
   outline: none;
   border-radius: 8px;
@@ -86,7 +86,7 @@ const MailInput = styled.textarea`
 
 const MessageInput = styled.textarea`
   width: 80%;
-  height: 250px;
+  height: 310px;
   padding: 10px 18px;
   border: none;
   outline: none;
