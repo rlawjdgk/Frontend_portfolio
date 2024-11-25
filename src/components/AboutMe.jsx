@@ -195,7 +195,7 @@ const MyEtcInfo = styled.div`
   .workExperience {
     color: ${(props) => props.theme.textColor};
     .item {
-      width: 58%;
+      width: 62%;
       font-size: 16px;
       font-weight: bold;
       display: flex;
