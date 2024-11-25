@@ -53,7 +53,7 @@ const SubTitle = styled.div`
 `;
 const MainTitle = styled(motion.div)`
   width: 100%;
-  font-size: 55px;
+  font-size: 50px;
   font-weight: 700;
   background: linear-gradient(175deg, #5581b0, #cdb1d0);
   -webkit-background-clip: text;

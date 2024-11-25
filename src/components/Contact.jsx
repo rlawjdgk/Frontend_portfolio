@@ -5,7 +5,7 @@ import emailjs from "emailjs-com";
 
 const Wrapper = styled.div`
   width: 100%;
-  height: 100%;
+  height: 100vh;
 `;
 
 const Inner = styled.div`
@@ -30,7 +30,7 @@ const SubTitle = styled.div`
   justify-content: center;
   align-items: center;
   padding: 6px 10px;
-  margin-bottom: 20px;
+  margin: 30px 0;
   span {
     display: flex;
     justify-content: center;
@@ -115,7 +115,7 @@ const MailBtn = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 100px;
+    margin-bottom: 55px;
     cursor: pointer;
     @media screen and (max-width: 769px) {
       font-size: 18px;
