@@ -24,15 +24,15 @@ const Inner = styled.div`
 
 const SubTitle = styled.div`
   width: 170px;
-  height: 37px;
+  height: 5%;
   border: 1px solid ${(props) => props.theme.borderColor};
   border-radius: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 6px 10px;
-  margin-top: 70px;
-  margin-bottom: 70px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   & > span {
     display: flex;
     justify-content: center;
@@ -83,7 +83,7 @@ const Project = styled.div`
   }
 
   .projectDetails {
-    width: 74%;
+    width: 83%;
     position: absolute;
     bottom: 34%;
     left: 4%;
