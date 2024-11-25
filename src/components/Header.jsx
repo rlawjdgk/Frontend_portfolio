@@ -23,8 +23,8 @@ const DesktopHeader = styled.header`
   display: flex;
   align-items: center;
   gap: 40px;
-  padding: 0 30%;
   position: relative;
+  left: 30%;
   .colorTheme {
     font-size: 22px;
     display: flex;
