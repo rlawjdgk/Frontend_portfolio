@@ -7,9 +7,6 @@ import SkillInfoModal from "./SkillInfoModal";
 const Wrapper = styled.div`
   width: 100%;
   height: auto;
-  @media screen and (max-width: 769px) {
-    height: 70vh;
-  }
 `;
 
 const Inner = styled.div`
