@@ -12,7 +12,7 @@ const Wrapper = styled.div`
 `;
 
 const Inner = styled.div`
-  width: 330px;
+  width: 320px;
   height: 680px;
   border: 1px solid ${(props) => props.theme.borderColor};
   border-radius: 30px;
@@ -22,10 +22,10 @@ const Inner = styled.div`
   left: 50px;
   transform: translateY(-50%);
   @media screen and (max-width: 769px) {
-    width: 99%;
+    width: 100%;
     position: inherit;
-    margin-top: 430px;
-    padding-top: 50px;
+    margin-top: 340px;
+    padding: 10px 0;
   }
 `;
 
@@ -55,7 +55,7 @@ const NameWrap = styled.div`
     color: ${(props) => props.theme.nameWrap};
   }
   @media screen and (max-width: 769px) {
-    width: 45%;
+    width: 36%;
   }
   @media screen and (max-width: 398px) {
     width: 120%;
@@ -87,7 +87,7 @@ const InfoWrap = styled.div`
   align-items: flex-start;
   gap: 30px;
   @media screen and (max-width: 769px) {
-    width: 45%;
+    width: 36%;
   }
   @media screen and (max-width: 390px) {
     width: 120%;
@@ -143,7 +143,6 @@ const Sns = styled.div`
   }
   @media screen and (max-width: 769px) {
     display: flex;
-    padding-left: 20px;
   }
 `;
 

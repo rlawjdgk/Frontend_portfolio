@@ -17,11 +17,9 @@ const Inner = styled.div`
   justify-content: center;
   padding-top: 100px;
   @media screen and (max-width: 769px) {
-    height: 100%;
-    padding-top: 10px;
+    height: 50%;
     display: inherit;
-    justify-content: inherit;
-    margin-top: 300px;
+    margin-top: 50px;
   }
   @media screen and (max-width: 390px) {
     height: 30%;
