@@ -13,7 +13,7 @@ const Inner = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding-top: 120px;
+  padding-top: 100px;
   @media screen and (max-width: 769px) {
   }
   @media screen and (max-width: 390px) {
@@ -30,8 +30,7 @@ const SubTitle = styled.div`
   justify-content: center;
   align-items: center;
   padding: 6px 10px;
-  margin-top: 30px;
-  margin-bottom: 50px;
+  margin: 30px 0;
   span {
     display: flex;
     justify-content: center;
