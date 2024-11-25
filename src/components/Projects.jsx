@@ -33,15 +33,15 @@ const SubTitle = styled.div`
   align-items: center;
   padding: 6px 10px;
   margin-bottom: 30px;
-  span {
+  & > span {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 10px;
+    margin-right: 8px;
   }
   @media screen and (max-width: 769px) {
-    margin-top: 0px;
-    padding-top: 0px;
+    height: 6%;
+    margin-bottom: 30px;
   }
 `;
 
