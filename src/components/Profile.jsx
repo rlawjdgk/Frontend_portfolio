@@ -43,7 +43,7 @@ const Container = styled.div`
 `;
 
 const NameWrap = styled.div`
-  width: 100%;
+  width: 85%;
   height: 15%;
   display: flex;
   justify-content: flex-start;
@@ -79,7 +79,7 @@ const MyPhoto = styled.div`
 `;
 
 const InfoWrap = styled.div`
-  width: 100%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -124,15 +124,15 @@ const Sns = styled.div`
   display: flex;
   margin-top: 20px;
   .icon {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     border: 1px solid ${(props) => props.theme.textColor};
     color: ${(props) => props.theme.iconColor};
     border-radius: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 13px;
+    margin-right: 7px;
     font-size: 16px;
     cursor: pointer;
     &:hover {
