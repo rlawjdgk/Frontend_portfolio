@@ -12,8 +12,8 @@ const Wrapper = styled.div`
 `;
 
 const Inner = styled.div`
-  width: 330px;
-  height: 690px;
+  width: 315px;
+  height: 660px;
   border: 1px solid ${(props) => props.theme.borderColor};
   border-radius: 30px;
   position: fixed;
@@ -43,7 +43,7 @@ const Container = styled.div`
 `;
 
 const NameWrap = styled.div`
-  width: 85%;
+  width: 93%;
   height: 15%;
   display: flex;
   justify-content: flex-start;
@@ -79,7 +79,7 @@ const MyPhoto = styled.div`
 `;
 
 const InfoWrap = styled.div`
-  width: 80%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -132,7 +132,7 @@ const Sns = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 7px;
+    margin-right: 10px;
     font-size: 16px;
     cursor: pointer;
     &:hover {
@@ -147,7 +147,7 @@ const Sns = styled.div`
 `;
 
 const Tab = styled(Link)`
-  width: 300px;
+  width: 260px;
   height: 50px;
   border-radius: 20px;
   background: ${(props) => props.theme.btnColor};
