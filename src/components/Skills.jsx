@@ -40,7 +40,6 @@ const SubTitle = styled.div`
 
 const SectionTitle = styled.h2`
   font-size: 22px;
-  margin-top: 30px;
   color: ${(props) => props.theme.nameWrap};
   margin-bottom: 20px;
 `;
@@ -50,6 +49,7 @@ const SkillWrap = styled.div`
   flex-wrap: wrap;
   display: flex;
   gap: 20px;
+  margin-bottom: 30px;
   @media screen and (max-width: 769px) {
     width: 770px;
   }
