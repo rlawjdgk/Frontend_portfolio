@@ -21,7 +21,7 @@ const Inner = styled.div`
 
 const SubTitle = styled.div`
   width: 130px;
-  height: 37px;
+  height: 5%;
   border: 1px solid ${(props) => props.theme.borderColor};
   border-radius: 30px;
   display: flex;
@@ -29,6 +29,7 @@ const SubTitle = styled.div`
   align-items: center;
   padding: 6px 10px;
   margin-top: 70px;
+  margin-bottom: 50px;
   span {
     display: flex;
     justify-content: center;
