@@ -97,6 +97,10 @@ const MessageInput = styled.textarea`
   resize: none;
   font-family: "Arial", sans-serif;
   padding-top: 18px;
+  @media screen and (max-width: 769px) {
+    width: 90%;
+    height: 500px;
+  }
   @media screen and (max-width: 390px) {
     width: 100%;
     height: 280px;
