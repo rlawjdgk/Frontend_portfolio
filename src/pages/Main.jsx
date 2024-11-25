@@ -22,7 +22,7 @@ const Wrapper = styled.div`
 `;
 
 const Right = styled.div`
-  width: calc(100% - 500px);
+  width: calc(100% - 450px);
   height: 100%;
   @media screen and (max-width: 769px) {
     width: 100%;
