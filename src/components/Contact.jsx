@@ -44,7 +44,6 @@ const ContactForm = styled.form`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin-top: 50px;
 `;
 
 const NameInput = styled.textarea`
