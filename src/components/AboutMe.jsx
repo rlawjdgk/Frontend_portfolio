@@ -44,9 +44,6 @@ const SubTitle = styled.div`
     height: 6%;
     margin-bottom: 30px;
   }
-  @media screen and (max-width: 390px) {
-    height: 15%;
-  }
 `;
 
 const Text = styled.div`
