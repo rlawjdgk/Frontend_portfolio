@@ -48,8 +48,7 @@ const SubTitle = styled.div`
 
 const MenuWrap = styled.ul`
   display: flex;
-  gap: 30px;
-  margin-top: 30px;
+  gap: 20px;
   li {
     margin-left: 10px;
     font-size: 18px;
@@ -89,8 +88,8 @@ const ProjectItem = styled.div`
     }
   }
   .data {
-    width: 240px;
-    height: 260px;
+    width: 230px;
+    height: 250px;
     background: #ccc;
     display: flex;
     border-radius: 20px;
@@ -120,13 +119,12 @@ const Span = styled.span`
 `;
 
 const ShowMoreButton = styled.button`
-  margin: 30px 0;
-  width: 8%;
+  margin: 20px 0 0 470px;
+  width: 10%;
   padding: 10px 20px;
   font-size: 16px;
   display: flex;
   justify-content: center;
-  margin-left: 470px;
   border: none;
   border-radius: 8px;
   background: ${(props) => props.theme.btnColor};
