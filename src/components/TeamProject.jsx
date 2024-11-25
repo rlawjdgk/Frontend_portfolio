@@ -6,9 +6,6 @@ import { teamProject } from "../assets/teamProject"; // teamProject 데이터 �
 const Wrapper = styled.div`
   width: 100%;
   height: auto; /* 최소 높이를 100vh로 설정 */
-  @media screen and (max-width: 769px) {
-    height: 70vh;
-  }
 `;
 
 const Inner = styled.div`
