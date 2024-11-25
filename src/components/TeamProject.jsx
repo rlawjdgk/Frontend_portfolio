@@ -56,7 +56,6 @@ const TeamWrap = styled.div`
 
 const Project = styled.div`
   position: relative;
-  width: 45%;
   display: flex;
   gap: 20px;
   @media screen and (max-width: 769px) {
@@ -83,7 +82,7 @@ const Project = styled.div`
   }
 
   .projectDetails {
-    width: 65%;
+    width: 80%;
     position: absolute;
     bottom: 34%;
     left: 4%;
@@ -92,7 +91,10 @@ const Project = styled.div`
     flex-direction: column;
     gap: 20px;
     h2 {
-      width: 100%;
+      font-size: 20px;
+    }
+    span {
+      font-size: 14px;
     }
     @media screen and (max-width: 769px) {
       width: 90%;
