@@ -109,7 +109,7 @@ const MailBtn = styled.div`
     height: 50px;
     border: none;
     border-radius: 30px;
-    font-size: 20px;
+    font-size: 16px;
     background: ${(props) => props.theme.btnColor};
     color: ${(props) => props.theme.btnTextColor};
     display: flex;
