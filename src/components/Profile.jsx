@@ -13,9 +13,10 @@ const Wrapper = styled.div`
 
 const Inner = styled.div`
   width: 315px;
-  height: 660px;
+  height: 655px;
   border: 1px solid ${(props) => props.theme.borderColor};
   border-radius: 30px;
+  z-index: 99;
   position: fixed;
   top: 55%;
   left: 50px;
