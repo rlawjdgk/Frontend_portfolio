@@ -105,7 +105,7 @@ const MessageInput = styled.textarea`
 `;
 
 const MailBtn = styled.div`
-  margin-top: 50px;
+  margin-top: 30px;
   input {
     width: 238px;
     height: 62px;
