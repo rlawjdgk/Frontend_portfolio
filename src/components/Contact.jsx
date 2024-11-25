@@ -23,14 +23,15 @@ const Inner = styled.div`
 
 const SubTitle = styled.div`
   width: 130px;
-  height: 37px;
+  height: 5%;
   border: 1px solid ${(props) => props.theme.borderColor};
   border-radius: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 6px 10px;
-  margin-top: 80px;
+  margin-top: 30px;
+  margin-bottom: 50px;
   span {
     display: flex;
     justify-content: center;
