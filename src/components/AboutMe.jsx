@@ -29,7 +29,7 @@ const SubTitle = styled.div`
   justify-content: center;
   align-items: center;
   padding: 6px 10px;
-  margin-top: 70px;
+  margin-top: 30px;
   margin-bottom: 50px;
   & > span {
     display: flex;

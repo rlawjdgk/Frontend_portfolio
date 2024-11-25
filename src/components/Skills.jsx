@@ -28,7 +28,7 @@ const SubTitle = styled.div`
   justify-content: center;
   align-items: center;
   padding: 6px 10px;
-  margin-top: 70px;
+  margin-top: 30px;
   margin-bottom: 50px;
   span {
     display: flex;
@@ -39,8 +39,8 @@ const SubTitle = styled.div`
 `;
 
 const SectionTitle = styled.h2`
-  font-size: 24px;
-  margin-top: 50px;
+  font-size: 22px;
+  margin-top: 30px;
   color: ${(props) => props.theme.nameWrap};
   margin-bottom: 20px;
 `;
@@ -57,8 +57,8 @@ const SkillWrap = styled.div`
     width: 365px;
   }
   .skillItem {
-    width: 150px;
-    height: 130px;
+    width: 120px;
+    height: 120px;
     border: 1px solid ${(props) => props.theme.borderColor};
     border-radius: 20px;
     display: flex;
@@ -82,6 +82,9 @@ const SkillWrap = styled.div`
   .data {
     width: 30px;
     height: 30px;
+    span {
+      font-size: 14px;
+    }
     @media screen and (max-width: 390px) {
       width: 30px;
       height: 30px;
