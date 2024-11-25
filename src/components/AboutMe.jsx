@@ -8,6 +8,9 @@ const Wrapper = styled.div`
   @media screen and (max-width: 769px) {
     height: 70vh;
   }
+  @media screen and (max-width: 390px) {
+    height: 100vh;
+  }
 `;
 
 const Inner = styled.div`
@@ -18,9 +21,6 @@ const Inner = styled.div`
   padding-top: 140px;
   @media screen and (max-width: 769px) {
     padding-top: 40px;
-  }
-  @media screen and (max-width: 390px) {
-    padding-top: 90px;
   }
 `;
 
@@ -63,6 +63,7 @@ const Text = styled.div`
   }
   @media screen and (max-width: 390px) {
     font-size: 14px;
+    margin-bottom: 30px;
   }
 `;
 
@@ -244,6 +245,7 @@ const MyEtcInfo = styled.div`
       @media screen and (max-width: 390px) {
         width: 25%;
         font-size: 16px;
+        margin-bottom: 30px;
       }
     }
     span {

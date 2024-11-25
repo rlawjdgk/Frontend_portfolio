@@ -58,7 +58,7 @@ const NameWrap = styled.div`
     width: 36%;
   }
   @media screen and (max-width: 398px) {
-    width: 120%;
+    width: 83%;
   }
 `;
 
@@ -90,7 +90,7 @@ const InfoWrap = styled.div`
     width: 36%;
   }
   @media screen and (max-width: 390px) {
-    width: 120%;
+    width: 81%;
   }
 `;
 

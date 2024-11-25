@@ -41,7 +41,7 @@ const SubTitle = styled.div`
     margin-bottom: 23px;
   }
   @media screen and (max-width: 390px) {
-    height: 15%;
+    height: 25%;
   }
   span {
     display: flex;
@@ -64,7 +64,7 @@ const MainTitle = styled(motion.div)`
     font-size: 40px;
   }
   @media screen and (max-width: 390px) {
-    font-size: 26px;
+    font-size: 30px;
   }
 `;
 const Home = () => {
