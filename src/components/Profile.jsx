@@ -13,12 +13,12 @@ const Wrapper = styled.div`
 
 const Inner = styled.div`
   width: 330px;
-  height: 700px;
+  height: 680px;
   border: 1px solid ${(props) => props.theme.borderColor};
   border-radius: 30px;
   z-index: 99;
   position: fixed;
-  top: 50%;
+  top: 53%;
   left: 50px;
   transform: translateY(-50%);
   @media screen and (max-width: 769px) {

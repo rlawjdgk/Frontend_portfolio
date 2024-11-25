@@ -13,7 +13,7 @@ const Inner = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding-top: 160px;
+  padding-top: 140px;
   @media screen and (max-width: 769px) {
   }
   @media screen and (max-width: 390px) {
@@ -115,7 +115,7 @@ const MailBtn = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 55px;
+    margin-bottom: 70px;
     cursor: pointer;
     @media screen and (max-width: 769px) {
       font-size: 18px;
