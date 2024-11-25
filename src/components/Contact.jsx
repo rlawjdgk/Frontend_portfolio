@@ -6,6 +6,8 @@ import emailjs from "emailjs-com";
 const Wrapper = styled.div`
   width: 100%;
   height: 100vh;
+  @media screen and (max-width: 769px) {
+  }
 `;
 
 const Inner = styled.div`
@@ -15,6 +17,7 @@ const Inner = styled.div`
   flex-direction: column;
   padding-top: 140px;
   @media screen and (max-width: 769px) {
+    padding-top: 40px;
   }
   @media screen and (max-width: 390px) {
     padding-top: 0;
@@ -125,8 +128,7 @@ const MailBtn = styled.div`
     }
   }
   @media screen and (max-width: 769px) {
-    margin-top: 20px;
-    padding-bottom: 20px;
+    margin-top: 10px;
   }
 `;
 

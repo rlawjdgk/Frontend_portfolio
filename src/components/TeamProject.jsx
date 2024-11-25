@@ -6,16 +6,19 @@ import { teamProject } from "../assets/teamProject"; // teamProject 데이터 �
 const Wrapper = styled.div`
   width: 100%;
   height: auto; /* 최소 높이를 100vh로 설정 */
+  @media screen and (max-width: 769px) {
+    height: 70vh;
+  }
 `;
 
 const Inner = styled.div`
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   padding-top: 140px;
   @media screen and (max-width: 769px) {
-    padding-top: 0;
-    margin-top: 100px;
+    padding-top: 40px;
   }
   @media screen and (max-width: 390px) {
     margin-top: 0px;
@@ -45,7 +48,7 @@ const TeamWrap = styled.div`
   display: flex;
   gap: 30px;
   @media screen and (max-width: 769px) {
-    gap: 40px;
+    gap: 0px;
   }
   @media screen and (max-width: 390px) {
     flex-direction: column;

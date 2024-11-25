@@ -5,6 +5,9 @@ import { IoPawSharp } from "react-icons/io5";
 const Wrapper = styled.div`
   width: 100%;
   height: 100vh;
+  @media screen and (max-width: 769px) {
+    height: 60vh;
+  }
 `;
 
 const Inner = styled.div`
@@ -14,6 +17,7 @@ const Inner = styled.div`
   flex-direction: column;
   padding-top: 140px;
   @media screen and (max-width: 769px) {
+    padding-top: 40px;
   }
   @media screen and (max-width: 390px) {
     padding-top: 90px;
@@ -37,7 +41,7 @@ const SubTitle = styled.div`
     margin-right: 8px;
   }
   @media screen and (max-width: 769px) {
-    margin-top: 0;
+    height: 4%;
     margin-bottom: 30px;
   }
   @media screen and (max-width: 390px) {

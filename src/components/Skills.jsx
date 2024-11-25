@@ -15,7 +15,7 @@ const Inner = styled.div`
   flex-direction: column;
   padding-top: 140px;
   @media screen and (max-width: 769px) {
-    margin-top: 250px;
+    padding-top: 40px;
   }
 `;
 
@@ -70,8 +70,8 @@ const SkillWrap = styled.div`
       scale: 1.1;
     }
     @media screen and (max-width: 769px) {
-      width: 160px;
-      height: 160px;
+      width: 120px;
+      height: 120px;
     }
     @media screen and (max-width: 390px) {
       width: 28%;

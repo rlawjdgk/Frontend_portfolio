@@ -37,6 +37,7 @@ const SubTitle = styled.div`
   padding: 6px 10px;
   margin-bottom: 30px;
   @media screen and (max-width: 769px) {
+    height: 10%;
     margin-bottom: 23px;
   }
   @media screen and (max-width: 390px) {
@@ -60,7 +61,7 @@ const MainTitle = styled(motion.div)`
   color: transparent;
   display: flex;
   @media screen and (max-width: 769px) {
-    font-size: 30px;
+    font-size: 40px;
   }
   @media screen and (max-width: 390px) {
     font-size: 26px;

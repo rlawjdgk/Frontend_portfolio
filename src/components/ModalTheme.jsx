@@ -13,7 +13,7 @@ const Wrapper = styled.div`
     width: 100%;
     height: auto;
     position: fixed;
-    bottom: 255px;
+    top: 5%;
     left: 48.5%;
     transform: translateX(-50%);
   }
@@ -22,7 +22,6 @@ const Wrapper = styled.div`
     height: auto;
     position: fixed;
     top: 15%;
-
     transform: translateX(-50%);
   }
 `;
