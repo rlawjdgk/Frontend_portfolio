@@ -22,7 +22,7 @@ const Inner = styled.div`
 
 const SubTitle = styled.div`
   width: 130px;
-  height: 4%;
+  height: 5%;
   border: 1px solid ${(props) => props.theme.borderColor};
   border-radius: 30px;
   display: flex;
@@ -47,11 +47,11 @@ const SubTitle = styled.div`
 `;
 
 const Text = styled.div`
-  font-size: 23px;
+  font-size: 18px;
   font-weight: 400;
   color: ${(props) => props.theme.textColor};
   line-height: 1.4;
-  margin-bottom: 100px;
+  margin-bottom: 60px;
   & > span {
     font-weight: 700;
   }
@@ -65,7 +65,7 @@ const Text = styled.div`
 
 const Info = styled.div`
   display: flex;
-  gap: 300px;
+  gap: 150px;
   @media screen and (max-width: 769px) {
     gap: 100px;
   }
@@ -82,14 +82,14 @@ const MyContact = styled.div`
   .name {
     color: ${(props) => props.theme.textColor};
     .item {
-      width: 40%;
+      width: 38%;
       display: flex;
       justify-content: center;
-      font-size: 20px;
+      font-size: 16px;
       font-weight: bold;
       border: 1px solid ${(props) => props.theme.borderColor};
       border-radius: 30px;
-      padding: 10px 16px;
+      padding: 6px 18px;
       margin-bottom: 15px;
       @media screen and (max-width: 390px) {
         width: 30%;
@@ -97,7 +97,7 @@ const MyContact = styled.div`
       }
     }
     span {
-      font-size: 20px;
+      font-size: 18px;
       color: ${(props) => props.theme.textColor};
       padding-left: 16px;
       @media screen and (max-width: 769px) {
@@ -108,14 +108,14 @@ const MyContact = styled.div`
   .phone {
     color: ${(props) => props.theme.textColor};
     .item {
-      width: 40%;
-      font-size: 20px;
+      width: 38%;
+      font-size: 16px;
       font-weight: bold;
       display: flex;
       justify-content: center;
       border: 1px solid ${(props) => props.theme.borderColor};
       border-radius: 30px;
-      padding: 10px 16px;
+      padding: 6px 18px;
       margin-bottom: 15px;
       @media screen and (max-width: 390px) {
         width: 30%;
@@ -123,7 +123,7 @@ const MyContact = styled.div`
       }
     }
     span {
-      font-size: 20px;
+      font-size: 18px;
       color: ${(props) => props.theme.textColor};
       padding-left: 16px;
       @media screen and (max-width: 390px) {
@@ -134,14 +134,14 @@ const MyContact = styled.div`
   .mail {
     color: ${(props) => props.theme.textColor};
     .item {
-      width: 40%;
-      font-size: 20px;
+      width: 38%;
+      font-size: 16px;
       font-weight: bold;
       display: flex;
       justify-content: center;
       border: 1px solid ${(props) => props.theme.borderColor};
       border-radius: 30px;
-      padding: 10px 16px;
+      padding: 6px 18px;
       margin-bottom: 15px;
       @media screen and (max-width: 390px) {
         width: 30%;
@@ -149,7 +149,7 @@ const MyContact = styled.div`
       }
     }
     span {
-      font-size: 20px;
+      font-size: 18px;
       color: ${(props) => props.theme.textColor};
       padding-left: 16px;
       @media screen and (max-width: 390px) {
@@ -166,14 +166,14 @@ const MyEtcInfo = styled.div`
   .school {
     color: ${(props) => props.theme.textColor};
     .item {
-      width: 43%;
-      font-size: 20px;
+      width: 40%;
+      font-size: 16px;
       font-weight: bold;
       display: flex;
       justify-content: center;
       border: 1px solid ${(props) => props.theme.borderColor};
       border-radius: 30px;
-      padding: 10px 16px;
+      padding: 6px 18px;
       margin-bottom: 15px;
       @media screen and (max-width: 390px) {
         width: 35%;
@@ -181,7 +181,7 @@ const MyEtcInfo = styled.div`
       }
     }
     span {
-      font-size: 20px;
+      font-size: 18px;
       color: ${(props) => props.theme.textColor};
       padding-left: 20px;
       @media screen and (max-width: 769px) {
@@ -196,14 +196,14 @@ const MyEtcInfo = styled.div`
   .workExperience {
     color: ${(props) => props.theme.textColor};
     .item {
-      width: 64%;
-      font-size: 20px;
+      width: 58%;
+      font-size: 16px;
       font-weight: bold;
       display: flex;
       justify-content: center;
       border: 1px solid ${(props) => props.theme.borderColor};
       border-radius: 30px;
-      padding: 10px 16px;
+      padding: 6px 18px;
       margin-bottom: 15px;
       @media screen and (max-width: 390px) {
         width: 50%;
@@ -211,7 +211,7 @@ const MyEtcInfo = styled.div`
       }
     }
     .date {
-      font-size: 20px;
+      font-size: 16px;
       padding-left: 20px;
       @media screen and (max-width: 390px) {
         font-size: 16px;
@@ -229,14 +229,14 @@ const MyEtcInfo = styled.div`
   .mbti {
     color: ${(props) => props.theme.textColor};
     .item {
-      width: 30%;
-      font-size: 20px;
+      width: 28%;
+      font-size: 16px;
       font-weight: bold;
       display: flex;
       justify-content: center;
       border: 1px solid ${(props) => props.theme.borderColor};
       border-radius: 30px;
-      padding: 10px 16px;
+      padding: 6px 18px;
       margin-bottom: 15px;
       @media screen and (max-width: 390px) {
         width: 25%;
@@ -244,7 +244,7 @@ const MyEtcInfo = styled.div`
       }
     }
     span {
-      font-size: 20px;
+      font-size: 18px;
       color: ${(props) => props.theme.textColor};
       padding-left: 20px;
       @media screen and (max-width: 390px) {
