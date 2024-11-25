@@ -13,7 +13,7 @@ const Inner = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding-top: 160px;
+  padding-top: 100px;
   @media screen and (max-width: 769px) {
   }
   @media screen and (max-width: 390px) {
@@ -47,8 +47,8 @@ const ContactForm = styled.form`
 
 const NameInput = styled.textarea`
   width: 30%;
-  height: 55px;
-  padding: 20px;
+  height: 45px;
+  padding: 15px;
   border: none;
   outline: none;
   border-radius: 8px;
@@ -66,8 +66,8 @@ const NameInput = styled.textarea`
 
 const MailInput = styled.textarea`
   width: 30%;
-  height: 55px;
-  padding: 20px;
+  height: 45px;
+  padding: 15px;
   border: none;
   outline: none;
   border-radius: 8px;
@@ -86,7 +86,7 @@ const MailInput = styled.textarea`
 
 const MessageInput = styled.textarea`
   width: 80%;
-  height: 320px;
+  height: 250px;
   padding: 10px 18px;
   border: none;
   outline: none;
@@ -115,7 +115,7 @@ const MailBtn = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 80px;
+    margin-bottom: 100px;
     cursor: pointer;
     @media screen and (max-width: 769px) {
       font-size: 18px;
