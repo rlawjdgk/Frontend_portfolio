@@ -19,11 +19,11 @@ const Wrapper = styled.div`
 const DesktopHeader = styled.header`
   width: 100%;
   height: 100%;
-  font-size: 20px;
+  font-size: 18px;
   display: flex;
   align-items: center;
-  gap: 50px;
-  padding: 0 26.5%;
+  gap: 40px;
+  padding: 0 35%;
   position: relative;
   .colorTheme {
     font-size: 22px;
