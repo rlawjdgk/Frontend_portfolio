@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { IoColorWandOutline } from "react-icons/io5";
-import ModalTheme from "./ModalTheme"; // 모달 컴포넌트 가져오기
-import { Link } from "react-scroll"; // react-scroll 라이브러리
+import ModalTheme from "./ModalTheme";
+import { Link, Events, scroller } from "react-scroll";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -11,9 +11,6 @@ const Wrapper = styled.div`
   background: ${(props) => props.theme.bgColor};
   color: ${(props) => props.theme.textColor};
   z-index: 99;
-  @media screen and (max-width: 769px) {
-    display: none;
-  }
 `;
 
 const DesktopHeader = styled.header`
@@ -22,14 +19,14 @@ const DesktopHeader = styled.header`
   font-size: 18px;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 40px;
   position: relative;
-  left: 30%;
+
   .colorTheme {
     font-size: 22px;
-    display: flex;
-    position: fixed;
-    right: 5%;
+    position: absolute;
+    right: 10%;
     cursor: pointer;
   }
 `;
@@ -38,9 +35,11 @@ const Tab = styled(Link)`
   color: ${(props) => props.theme.textColor};
   padding: 8px;
   text-decoration: none;
-  position: relative; /* ::after 배치를 위해 position 설정 */
+  position: relative;
   transition: color 0.3s ease;
   cursor: pointer;
+  font-size: 16px;
+
   &::after {
     content: "";
     position: absolute;
@@ -49,8 +48,9 @@ const Tab = styled(Link)`
     width: 0;
     height: 2px;
     background-color: ${(props) => props.theme.borderColor};
-    transition: width 0.3s ease; /* width에 애니메이션 추가 */
+    transition: width 0.3s ease;
   }
+
   &.selected::after {
     width: 100%;
     background-color: ${(props) => props.theme.borderColor};
@@ -70,17 +70,26 @@ const Header = ({ changeTheme }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
 
+  useEffect(() => {
+    // React Scroll 이벤트 등록
+    Events.scrollEvent.register("begin", () => {
+      console.log("Scroll event started");
+    });
+
+    Events.scrollEvent.register("end", () => {
+      console.log("Scroll event ended");
+    });
+
+    return () => {
+      // React Scroll 이벤트 해제
+      Events.scrollEvent.remove("begin");
+      Events.scrollEvent.remove("end");
+    };
+  }, []);
+
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
   };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
-
-  // const handleTabClick = (tab) => {
-  //   setSelectedTab(tab); // 탭 클릭 시 선택된 탭 업데이트
-  // };
 
   return (
     <Wrapper>
@@ -89,9 +98,21 @@ const Header = ({ changeTheme }) => {
           <Tab
             key={tab}
             className={selectedTab === tab ? "selected" : ""}
-            to={tab.replace(" ", "")} // 공백 제거와 대소문자 일치
+            to={tab.replace(" ", "")}
             spy={true}
-            onSetActive={() => setSelectedTab(tab)}
+            smooth={true}
+            duration={500}
+            onSetActive={() => setSelectedTab(tab)} // 활성 탭 설정
+            onClick={() => {
+              // Contact 탭 누를 때 강제로 스크롤
+              if (tab === "Contact") {
+                scroller.scrollTo("Contact", {
+                  smooth: true,
+                  duration: 500,
+                  offset: -90, // 헤더 높이 보정
+                });
+              }
+            }}
           >
             {tab}
           </Tab>
@@ -101,7 +122,10 @@ const Header = ({ changeTheme }) => {
         </div>
       </DesktopHeader>
       {isModalOpen && (
-        <ModalTheme changeTheme={changeTheme} closeModal={closeModal} />
+        <ModalTheme
+          changeTheme={changeTheme}
+          closeModal={() => setIsModalOpen(false)}
+        />
       )}
     </Wrapper>
   );
