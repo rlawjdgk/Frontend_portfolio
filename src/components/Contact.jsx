@@ -13,7 +13,7 @@ const Inner = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding-top: 100px;
+  padding-top: 160px;
   @media screen and (max-width: 769px) {
   }
   @media screen and (max-width: 390px) {
@@ -86,7 +86,7 @@ const MailInput = styled.textarea`
 
 const MessageInput = styled.textarea`
   width: 80%;
-  height: 345px;
+  height: 320px;
   padding: 10px 18px;
   border: none;
   outline: none;
