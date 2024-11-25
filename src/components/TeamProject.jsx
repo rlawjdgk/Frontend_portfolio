@@ -32,7 +32,7 @@ const SubTitle = styled.div`
   align-items: center;
   padding: 6px 10px;
   margin-top: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   & > span {
     display: flex;
     justify-content: center;
@@ -69,7 +69,7 @@ const Project = styled.div`
   .projectImage {
     img {
       filter: brightness(50%);
-      width: 470px;
+      width: 400px;
       height: 400px;
       border-radius: 10px;
       margin-bottom: 200px;
@@ -83,7 +83,7 @@ const Project = styled.div`
   }
 
   .projectDetails {
-    width: 83%;
+    width: 65%;
     position: absolute;
     bottom: 34%;
     left: 4%;
@@ -91,6 +91,9 @@ const Project = styled.div`
     display: flex;
     flex-direction: column;
     gap: 20px;
+    h2 {
+      width: 100%;
+    }
     @media screen and (max-width: 769px) {
       width: 90%;
       font-size: 16px;
