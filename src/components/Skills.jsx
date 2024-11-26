@@ -59,8 +59,8 @@ const SkillWrap = styled.div`
     width: 100%;
   }
   .skillItem {
-    width: 20%;
-    height: 120px;
+    width: 10%;
+    height: 130px;
     border: 1px solid ${(props) => props.theme.borderColor};
     border-radius: 20px;
     display: flex;

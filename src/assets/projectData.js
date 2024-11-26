@@ -2,7 +2,7 @@ export const ProjectData = [
   {
     id: 1,
     category: "publishing",
-    name: "Login/SignUp page",
+    name: "Login/SignUp",
     image: "/img/background.jpg",
     skillFirst: "/img/html.png",
     skillSecond: "/img/css.png",
@@ -74,7 +74,7 @@ export const ProjectData = [
   {
     id: 7,
     category: "frontend",
-    name: "LOL Character Information",
+    name: "LOL Character",
     image: "/img/background.jpg",
     skillFirst: "/img/typescript.png",
     skillSecond: null,

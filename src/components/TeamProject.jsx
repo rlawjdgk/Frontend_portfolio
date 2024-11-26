@@ -47,6 +47,10 @@ const TeamWrap = styled.div`
   @media screen and (max-width: 769px) {
     gap: 0px;
   }
+  @media screen and (max-width: 750px) {
+    flex-direction: column;
+    gap: 0px;
+  }
   @media screen and (max-width: 390px) {
     flex-direction: column;
     gap: 0px;

@@ -100,6 +100,10 @@ const ProjectItem = styled.div`
       filter: brightness(100%);
       scale: 1.1;
     }
+    @media screen and (max-width: 730px) {
+      width: 100%;
+      height: 200px;
+    }
     @media screen and (max-width: 390px) {
       width: 150px;
       height: 150px;
