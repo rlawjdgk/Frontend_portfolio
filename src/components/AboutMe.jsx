@@ -166,7 +166,8 @@ const MyEtcInfo = styled.div`
   .school {
     color: ${(props) => props.theme.textColor};
     .item {
-      width: 40%;
+      width: 100%;
+      max-width: 125px;
       font-size: 16px;
       font-weight: bold;
       display: flex;
@@ -213,6 +214,11 @@ const MyEtcInfo = styled.div`
         width: 50%;
         font-size: 16px;
       }
+      p {
+        @media screen and (max-width: 769px) {
+          flex-direction: column;
+        }
+      }
     }
     .date {
       font-size: 16px;
@@ -233,7 +239,8 @@ const MyEtcInfo = styled.div`
   .mbti {
     color: ${(props) => props.theme.textColor};
     .item {
-      width: 28%;
+      width: 100%;
+      max-width: 90px;
       font-size: 16px;
       font-weight: bold;
       display: flex;
@@ -300,7 +307,7 @@ const AboutMe = () => {
               <div className="item"> Work Experience</div>
               <div className="date">
                 <span> 2023 - 2024</span>
-                Makeup Forever Sales
+                <p>Makeup Forever Sales</p>
               </div>
             </div>
             <div className="mbti">
