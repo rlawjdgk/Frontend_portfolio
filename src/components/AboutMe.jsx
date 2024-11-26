@@ -15,7 +15,6 @@ const Wrapper = styled.div`
 
 const Inner = styled.div`
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   padding-top: 140px;
@@ -68,7 +67,7 @@ const Info = styled.div`
   display: flex;
   gap: 200px;
   @media screen and (max-width: 769px) {
-    gap: 170px;
+    gap: 20px;
   }
   @media screen and (max-width: 450px) {
     flex-direction: column;
