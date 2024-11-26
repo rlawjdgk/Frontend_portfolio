@@ -16,7 +16,7 @@ const ModalWrapper = styled.div`
   @media screen and (max-width: 769px) {
     width: 100%;
   }
-  @media screen and (max-width: 390px) {
+  @media screen and (max-width: 430px) {
   }
 `;
 
@@ -31,7 +31,7 @@ const Inner = styled.div`
   @media screen and (max-width: 769px) {
     width: 90%;
   }
-  @media screen and (max-width: 390px) {
+  @media screen and (max-width: 430px) {
     width: 90%;
     height: 500px;
   }
@@ -44,7 +44,7 @@ const ProjectWrap = styled.div`
     display: flex;
     align-items: center;
     margin-left: 10px;
-    @media screen and (max-width: 390px) {
+    @media screen and (max-width: 430px) {
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -52,7 +52,7 @@ const ProjectWrap = styled.div`
       padding: 15px;
     }
   }
-  @media screen and (max-width: 390px) {
+  @media screen and (max-width: 430px) {
     padding: 0 0;
   }
 `;
@@ -62,13 +62,13 @@ const DataWrap = styled.div`
   display: flex;
   flex-direction: column;
   margin-right: 30px;
-  @media screen and (max-width: 390px) {
+  @media screen and (max-width: 430px) {
     margin-bottom: 10px;
   }
   img {
     width: 300px;
     height: 400px;
-    @media screen and (max-width: 390px) {
+    @media screen and (max-width: 430px) {
       width: 300px;
       height: 150px;
     }
@@ -79,7 +79,7 @@ const ProjectItem = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  @media screen and (max-width: 390px) {
+  @media screen and (max-width: 430px) {
     gap: 10px;
     margin-left: 7px;
   }
@@ -88,7 +88,7 @@ const ProjectItem = styled.div`
 const ProjectDesc = styled.div`
   flex-direction: column;
   gap: 15px;
-  @media screen and (max-width: 390px) {
+  @media screen and (max-width: 430px) {
     gap: 10px;
     width: 90%;
   }
@@ -101,7 +101,7 @@ const Name = styled.span`
   @media screen and (max-width: 769px) {
     font-size: 24px;
   }
-  @media screen and (max-width: 390px) {
+  @media screen and (max-width: 430px) {
     font-size: 18px;
     width: 90%;
   }
@@ -114,7 +114,7 @@ const Git = styled.p`
   @media screen and (max-width: 769px) {
     font-size: 16px;
   }
-  @media screen and (max-width: 390px) {
+  @media screen and (max-width: 430px) {
     font-size: 14px;
   }
 `;
@@ -127,7 +127,7 @@ const Final = styled.p`
   @media screen and (max-width: 769px) {
     font-size: 16px;
   }
-  @media screen and (max-width: 390px) {
+  @media screen and (max-width: 430px) {
     font-size: 14px;
     margin-bottom: 10px;
   }
@@ -136,7 +136,7 @@ const Final = styled.p`
 const Desc = styled.span`
   width: 100%;
   font-size: 18px;
-  @media screen and (max-width: 390px) {
+  @media screen and (max-width: 430px) {
     font-size: 14px;
     width: 20%;
   }
@@ -160,7 +160,7 @@ const Skill = styled.span`
   @media screen and (max-width: 769px) {
     margin-top: 20px;
   }
-  @media screen and (max-width: 390px) {
+  @media screen and (max-width: 430px) {
     font-size: 12px;
     margin-top: 15px;
     width: 100%;
@@ -176,7 +176,7 @@ const CloseBtn = styled.div`
     right: 8%;
     bottom: 23%;
   }
-  @media screen and (max-width: 390px) {
+  @media screen and (max-width: 430px) {
     right: 11%;
     bottom: 22%;
   }
@@ -187,7 +187,7 @@ const CloseBtn = styled.div`
     border-radius: 20px;
     background: ${(props) => props.theme.btnColor};
     color: ${(props) => props.theme.btnTextColor};
-    @media screen and (max-width: 390px) {
+    @media screen and (max-width: 430px) {
       width: 60px;
       height: 30px;
     }
