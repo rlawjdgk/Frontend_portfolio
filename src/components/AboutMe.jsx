@@ -40,7 +40,7 @@ const SubTitle = styled.div`
     margin-right: 8px;
   }
   @media screen and (max-width: 769px) {
-    height: 6%;
+    height: 4%;
     margin-bottom: 30px;
   }
 `;

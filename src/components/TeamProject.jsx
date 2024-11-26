@@ -80,6 +80,7 @@ const Project = styled.div`
       @media screen and (max-width: 769px) {
         width: 350px;
         height: 400px;
+        margin-bottom: 0px;
       }
     }
   }
