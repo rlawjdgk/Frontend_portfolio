@@ -8,7 +8,7 @@ const Wrapper = styled.div`
   @media screen and (max-width: 769px) {
     height: 70vh;
   }
-  @media screen and (max-width: 390px) {
+  @media screen and (max-width: 430px) {
     height: 100vh;
   }
 `;

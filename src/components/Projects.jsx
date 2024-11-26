@@ -80,7 +80,7 @@ const ProjectItem = styled.div`
       padding-top: 20px;
       flex-wrap: wrap;
     }
-    @media screen and (max-width: 390px) {
+    @media screen and (max-width: 430px) {
       width: 43%;
       padding-top: 0px;
       gap: 10px;
