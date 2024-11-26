@@ -53,13 +53,13 @@ const SkillWrap = styled.div`
   gap: 20px;
   margin-bottom: 30px;
   @media screen and (max-width: 769px) {
-    width: 770px;
+    width: 100%;
   }
   @media screen and (max-width: 390px) {
-    width: 365px;
+    width: 100%;
   }
   .skillItem {
-    width: 120px;
+    width: 20%;
     height: 120px;
     border: 1px solid ${(props) => props.theme.borderColor};
     border-radius: 20px;

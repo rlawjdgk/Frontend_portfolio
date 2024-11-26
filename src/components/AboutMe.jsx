@@ -69,7 +69,7 @@ const Info = styled.div`
   @media screen and (max-width: 769px) {
     gap: 30px;
   }
-  @media screen and (max-width: 430px) {
+  @media screen and (max-width: 440px) {
     flex-direction: column;
   }
   @media screen and (max-width: 390px) {
@@ -85,7 +85,8 @@ const MyContact = styled.div`
   .name {
     color: ${(props) => props.theme.textColor};
     .item {
-      width: 38%;
+      width: 100%;
+      max-width: 100px;
       display: flex;
       justify-content: center;
       font-size: 16px;
@@ -111,7 +112,8 @@ const MyContact = styled.div`
   .phone {
     color: ${(props) => props.theme.textColor};
     .item {
-      width: 38%;
+      width: 100%;
+      max-width: 100px;
       font-size: 16px;
       font-weight: bold;
       display: flex;
@@ -137,7 +139,8 @@ const MyContact = styled.div`
   .mail {
     color: ${(props) => props.theme.textColor};
     .item {
-      width: 38%;
+      width: 100%;
+      max-width: 100px;
       font-size: 16px;
       font-weight: bold;
       display: flex;
