@@ -70,7 +70,7 @@ const DataWrap = styled.div`
     }
     @media screen and (max-width: 390px) {
       width: 80%;
-      height: 55%;
+      height: 60%;
     }
   }
 `;
@@ -96,6 +96,7 @@ const CloseBtn = styled.div`
   }
   @media screen and (max-width: 390px) {
     right: 13%;
+    bottom: 30%;
   }
   button {
     border: none;

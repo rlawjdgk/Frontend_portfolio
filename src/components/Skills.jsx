@@ -53,7 +53,7 @@ const SkillWrap = styled.div`
   gap: 20px;
   margin-bottom: 30px;
   @media screen and (max-width: 769px) {
-    width: 100%;
+    width: 104%;
   }
   @media screen and (max-width: 390px) {
     width: 100%;

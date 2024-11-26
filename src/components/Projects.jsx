@@ -101,8 +101,8 @@ const ProjectItem = styled.div`
       scale: 1.1;
     }
     @media screen and (max-width: 730px) {
-      width: 200px;
-      height: 200px;
+      width: 150px;
+      height: 150px;
     }
     @media screen and (max-width: 390px) {
       width: 150px;
@@ -136,6 +136,10 @@ const ShowMoreButton = styled.button`
   @media screen and (max-width: 769px) {
     width: 16%;
     margin-left: 300px;
+  }
+  @media screen and (max-width: 412px) {
+    width: 30%;
+    margin-left: 100px;
   }
   @media screen and (max-width: 390px) {
     width: 28%;

@@ -49,11 +49,9 @@ const TeamWrap = styled.div`
   }
   @media screen and (max-width: 750px) {
     flex-direction: column;
-    gap: 0px;
+    gap: 30px;
   }
   @media screen and (max-width: 390px) {
-    flex-direction: column;
-    gap: 0px;
   }
 `;
 
