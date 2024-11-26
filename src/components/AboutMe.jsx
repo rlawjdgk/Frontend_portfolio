@@ -67,10 +67,13 @@ const Info = styled.div`
   display: flex;
   gap: 150px;
   @media screen and (max-width: 769px) {
-    gap: 100px;
+    gap: 30px;
+  }
+  @media screen and (max-width: 430px) {
+    flex-direction: column;
   }
   @media screen and (max-width: 390px) {
-    gap: 50px;
+    gap: 20px;
     flex-direction: column;
   }
 `;
@@ -186,7 +189,7 @@ const MyEtcInfo = styled.div`
       color: ${(props) => props.theme.textColor};
       padding-left: 20px;
       @media screen and (max-width: 769px) {
-        font-size: 26px;
+        font-size: 16px;
       }
       @media screen and (max-width: 390px) {
         font-size: 16px;
