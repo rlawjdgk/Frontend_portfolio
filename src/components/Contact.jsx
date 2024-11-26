@@ -44,7 +44,8 @@ const ContactForm = styled.form`
 `;
 
 const NameInput = styled.textarea`
-  width: 30%;
+  width: 100%;
+  max-width: 300px;
   height: 55px;
   padding: 20px;
   border: none;
@@ -63,7 +64,8 @@ const NameInput = styled.textarea`
 `;
 
 const MailInput = styled.textarea`
-  width: 30%;
+  width: 100%;
+  max-width: 300px;
   height: 55px;
   padding: 20px;
   border: none;
