@@ -6,7 +6,6 @@ const Wrapper = styled.div`
   width: 100%;
   height: 100vh;
   @media screen and (max-width: 769px) {
-    height: 70vh;
   }
   @media screen and (max-width: 390px) {
     height: 100vh;
@@ -186,7 +185,7 @@ const MyEtcInfo = styled.div`
       color: ${(props) => props.theme.textColor};
       padding-left: 20px;
       @media screen and (max-width: 769px) {
-        font-size: 20px;
+        font-size: 26px;
       }
       @media screen and (max-width: 390px) {
         font-size: 16px;
@@ -197,7 +196,8 @@ const MyEtcInfo = styled.div`
   .workExperience {
     color: ${(props) => props.theme.textColor};
     .item {
-      width: 62%;
+      width: 100%;
+      max-width: 173px;
       font-size: 16px;
       font-weight: bold;
       display: flex;
@@ -206,6 +206,9 @@ const MyEtcInfo = styled.div`
       border-radius: 30px;
       padding: 6px 18px;
       margin-bottom: 15px;
+      @media screen and (max-width: 769px) {
+        font-size: 16px;
+      }
       @media screen and (max-width: 390px) {
         width: 50%;
         font-size: 16px;

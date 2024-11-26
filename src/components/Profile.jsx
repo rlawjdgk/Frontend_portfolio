@@ -89,7 +89,7 @@ const InfoWrap = styled.div`
   align-items: flex-start;
   gap: 30px;
   @media screen and (max-width: 769px) {
-    width: 36%;
+    width: 250px;
   }
   @media screen and (max-width: 390px) {
     width: 81%;
