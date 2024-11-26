@@ -57,7 +57,7 @@ const NameWrap = styled.div`
   @media screen and (max-width: 769px) {
     width: 36%;
   }
-  @media screen and (max-width: 398px) {
+  @media screen and (max-width: 390px) {
     width: 83%;
   }
 `;
@@ -65,6 +65,10 @@ const NameWrap = styled.div`
 const AnimalImg = styled.div`
   width: 100px;
   height: 100px;
+  @media screen and (max-width: 769px) {
+    width: 100%;
+    max-width: 100px;
+  }
   svg {
     stroke: ${(props) => props.theme.nameWrap};
   }

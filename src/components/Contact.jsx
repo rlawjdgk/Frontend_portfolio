@@ -99,7 +99,7 @@ const MessageInput = styled.textarea`
   padding-top: 18px;
   @media screen and (max-width: 769px) {
     width: 90%;
-    height: 500px;
+    height: 400px;
   }
   @media screen and (max-width: 390px) {
     width: 100%;
