@@ -86,7 +86,7 @@ const Desc = styled.div`
 const CloseBtn = styled.div`
   border: none;
   position: absolute;
-  right: 32%;
+  right: 34%;
   bottom: 28%;
   @media screen and (max-width: 1728px) {
     right: 32%;
