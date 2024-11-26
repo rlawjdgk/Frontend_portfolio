@@ -6,6 +6,7 @@ const Wrapper = styled.div`
   width: 100%;
   height: 100vh;
   @media screen and (max-width: 769px) {
+    height: 70vh;
   }
   @media screen and (max-width: 390px) {
     height: 100vh;
@@ -67,7 +68,7 @@ const Info = styled.div`
   display: flex;
   gap: 200px;
   @media screen and (max-width: 769px) {
-    gap: 30px;
+    gap: 170px;
   }
   @media screen and (max-width: 450px) {
     flex-direction: column;

@@ -76,6 +76,7 @@ const ProjectItem = styled.div`
     gap: 20px;
     cursor: pointer;
     @media screen and (max-width: 769px) {
+      width: 104%;
       padding-top: 20px;
       flex-wrap: wrap;
     }
@@ -137,7 +138,7 @@ const ShowMoreButton = styled.button`
     width: 16%;
     margin-left: 300px;
   }
-  @media screen and (max-width: 412px) {
+  @media screen and (max-width: 430px) {
     width: 30%;
     margin-left: 100px;
   }
