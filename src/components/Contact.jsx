@@ -85,7 +85,8 @@ const MailInput = styled.textarea`
 `;
 
 const MessageInput = styled.textarea`
-  width: 80%;
+  width: 100%;
+  max-width: 700px;
   height: 330px;
   padding: 10px 18px;
   border: none;
