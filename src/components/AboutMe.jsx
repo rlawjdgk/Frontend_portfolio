@@ -69,7 +69,7 @@ const Info = styled.div`
   @media screen and (max-width: 769px) {
     gap: 30px;
   }
-  @media screen and (max-width: 440px) {
+  @media screen and (max-width: 450px) {
     flex-direction: column;
   }
   @media screen and (max-width: 390px) {
@@ -103,7 +103,7 @@ const MyContact = styled.div`
     span {
       font-size: 18px;
       color: ${(props) => props.theme.textColor};
-      padding-left: 16px;
+      padding-left: 10px;
       @media screen and (max-width: 769px) {
         font-size: 16px;
       }
@@ -128,9 +128,9 @@ const MyContact = styled.div`
       }
     }
     span {
-      font-size: 18px;
+      font-size: 16px;
       color: ${(props) => props.theme.textColor};
-      padding-left: 16px;
+      padding-left: 10px;
       @media screen and (max-width: 390px) {
         font-size: 16px;
       }
@@ -155,9 +155,9 @@ const MyContact = styled.div`
       }
     }
     span {
-      font-size: 18px;
+      font-size: 16px;
       color: ${(props) => props.theme.textColor};
-      padding-left: 16px;
+      padding-left: 10px;
       @media screen and (max-width: 390px) {
         font-size: 16px;
       }
@@ -190,7 +190,7 @@ const MyEtcInfo = styled.div`
     span {
       font-size: 18px;
       color: ${(props) => props.theme.textColor};
-      padding-left: 20px;
+      padding-left: 10px;
       @media screen and (max-width: 769px) {
         font-size: 16px;
       }
@@ -228,7 +228,7 @@ const MyEtcInfo = styled.div`
     }
     .date {
       font-size: 16px;
-      padding-left: 20px;
+      padding-left: 10px;
       @media screen and (max-width: 390px) {
         font-size: 16px;
       }
@@ -264,7 +264,7 @@ const MyEtcInfo = styled.div`
     span {
       font-size: 18px;
       color: ${(props) => props.theme.textColor};
-      padding-left: 20px;
+      padding-left: 10px;
       @media screen and (max-width: 390px) {
         font-size: 16px;
       }
