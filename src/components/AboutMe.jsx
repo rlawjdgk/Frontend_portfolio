@@ -65,7 +65,7 @@ const Text = styled.div`
 
 const Info = styled.div`
   display: flex;
-  gap: 150px;
+  gap: 200px;
   @media screen and (max-width: 769px) {
     gap: 30px;
   }

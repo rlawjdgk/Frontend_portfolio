@@ -66,11 +66,11 @@ const DataWrap = styled.div`
     height: 64px;
     @media screen and (max-width: 769px) {
       width: 100%;
-      height: 53px;
+      max-width: 80px;
     }
     @media screen and (max-width: 390px) {
-      width: 30px;
-      height: 30px;
+      width: 80%;
+      height: 55%;
     }
   }
 `;
@@ -88,13 +88,14 @@ const CloseBtn = styled.div`
   position: absolute;
   right: 32%;
   bottom: 28%;
+  @media screen and (max-width: 1728px) {
+    right: 32%;
+  }
   @media screen and (max-width: 769px) {
     right: 20%;
-    bottom: 28%;
   }
   @media screen and (max-width: 390px) {
     right: 13%;
-    bottom: 30%;
   }
   button {
     border: none;
