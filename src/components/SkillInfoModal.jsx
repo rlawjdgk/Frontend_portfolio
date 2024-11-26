@@ -22,7 +22,7 @@ const ModalWrapper = styled.div`
 const Inner = styled.div`
   width: 50%;
   max-width: 580px;
-  height: 400px;
+  height: 50%;
   background: ${(props) => props.theme.bgColor};
   border-radius: 8px;
   text-align: center;
@@ -64,6 +64,10 @@ const DataWrap = styled.div`
   img {
     width: 64px;
     height: 64px;
+    @media screen and (max-width: 769px) {
+      width: 100%;
+      height: 53px;
+    }
     @media screen and (max-width: 390px) {
       width: 30px;
       height: 30px;
@@ -72,7 +76,7 @@ const DataWrap = styled.div`
 `;
 
 const Desc = styled.div`
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.5;
   @media screen and (max-width: 390px) {
     font-size: 14px;
@@ -83,10 +87,10 @@ const CloseBtn = styled.div`
   border: none;
   position: absolute;
   right: 32%;
-  bottom: 13%;
+  bottom: 28%;
   @media screen and (max-width: 769px) {
     right: 20%;
-    bottom: 32%;
+    bottom: 28%;
   }
   @media screen and (max-width: 390px) {
     right: 13%;

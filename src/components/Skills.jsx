@@ -72,6 +72,10 @@ const SkillWrap = styled.div`
     &:hover {
       scale: 1.1;
     }
+    @media screen and (max-width: 1280px) {
+      width: 15%;
+      height: 120px;
+    }
     @media screen and (max-width: 769px) {
       width: 120px;
       height: 120px;
