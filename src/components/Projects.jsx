@@ -62,10 +62,11 @@ const MenuWrap = styled.ul`
 `;
 
 const ProjectItem = styled.div`
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   padding-top: 40px;
-  gap: 30px;
+  gap: 20px;
   cursor: pointer;
   .projectItem {
     display: flex;
@@ -75,7 +76,6 @@ const ProjectItem = styled.div`
     gap: 20px;
     cursor: pointer;
     @media screen and (max-width: 769px) {
-      width: 30%;
       padding-top: 20px;
       flex-wrap: wrap;
     }
