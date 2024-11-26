@@ -47,7 +47,7 @@ const NameWrap = styled.div`
   width: 93%;
   height: 15%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   .name {
     font-size: 30px;
@@ -55,7 +55,7 @@ const NameWrap = styled.div`
     color: ${(props) => props.theme.nameWrap};
   }
   @media screen and (max-width: 769px) {
-    width: 36%;
+    width: 70%;
   }
   @media screen and (max-width: 390px) {
     width: 83%;
@@ -65,12 +65,10 @@ const NameWrap = styled.div`
 const AnimalImg = styled.div`
   width: 100px;
   height: 100px;
-  @media screen and (max-width: 769px) {
-    width: 100%;
-    max-width: 100px;
-  }
   svg {
     stroke: ${(props) => props.theme.nameWrap};
+    width: 100px;
+    height: 100px;
   }
 `;
 
