@@ -101,7 +101,7 @@ const ProjectItem = styled.div`
       scale: 1.1;
     }
     @media screen and (max-width: 730px) {
-      width: 100%;
+      width: 200px;
       height: 200px;
     }
     @media screen and (max-width: 390px) {
@@ -122,7 +122,7 @@ const Span = styled.span`
 `;
 
 const ShowMoreButton = styled.button`
-  margin: 20px 0 0 470px;
+  margin: 30px 0 0 470px;
   width: 10%;
   padding: 10px 20px;
   font-size: 16px;

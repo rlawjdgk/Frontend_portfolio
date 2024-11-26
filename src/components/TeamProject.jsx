@@ -101,12 +101,10 @@ const Project = styled.div`
       font-size: 14px;
     }
     @media screen and (max-width: 769px) {
-      width: 90%;
-      font-size: 16px;
-    }
-    @media screen and (max-width: 769px) {
       width: 100%;
       max-width: 300px;
+      font-size: 16px;
+      bottom: 0%;
     }
     @media screen and (max-width: 390px) {
       width: 100%;
