@@ -66,7 +66,7 @@ const DataWrap = styled.div`
     height: 64px;
     @media screen and (max-width: 769px) {
       width: 100%;
-      max-width: 80px;
+      max-width: 70px;
     }
     @media screen and (max-width: 390px) {
       width: 80%;
