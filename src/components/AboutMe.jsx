@@ -67,10 +67,11 @@ const Info = styled.div`
   display: flex;
   gap: 200px;
   @media screen and (max-width: 769px) {
-    gap: 20px;
+    gap: 120px;
   }
   @media screen and (max-width: 450px) {
     flex-direction: column;
+    gap: 20px;
   }
   @media screen and (max-width: 390px) {
     gap: 20px;
