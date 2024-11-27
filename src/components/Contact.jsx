@@ -17,6 +17,9 @@ const Inner = styled.div`
   @media screen and (max-width: 769px) {
     padding-top: 40px;
   }
+  @media screen and (max-width: 430px) {
+    padding-top: 80px;
+  }
 `;
 
 const SubTitle = styled.div`
