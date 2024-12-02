@@ -3,7 +3,7 @@ export const ProjectData = [
     id: 1,
     category: "publishing",
     name: "Login/SignUp",
-    image: "/img/Login.Signup.png",
+    image: "/img/LoginSignup.png",
     skillFirst: "/img/html.png",
     skillSecond: "/img/css.png",
     skillThird: "/img/javascript.png",
