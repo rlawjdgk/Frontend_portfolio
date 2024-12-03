@@ -34,7 +34,7 @@ const Inner = styled.div`
   }
   @media screen and (max-width: 430px) {
     width: 90%;
-    height: 500px;
+    height: 600px;
   }
 `;
 
@@ -72,7 +72,7 @@ const DataWrap = styled.div`
     object-fit: cover;
     @media screen and (max-width: 430px) {
       width: 300px;
-      height: 150px;
+      height: 300px;
     }
   }
 `;
@@ -113,8 +113,7 @@ const Desc = styled.span`
   width: 100%;
   font-size: 16px;
   @media screen and (max-width: 430px) {
-    font-size: 16px;
-    width: 20%;
+    font-size: 14px;
   }
 `;
 
@@ -132,6 +131,7 @@ const Skill = styled.span`
     @media screen and (max-width: 769px) {
       width: 25px;
       height: 25px;
+      margin-bottom: 15px;
     }
   }
   @media screen and (max-width: 769px) {
@@ -189,11 +189,11 @@ const CloseBtn = styled.div`
   top: 19%;
   @media screen and (max-width: 769px) {
     right: 8%;
-    bottom: 23%;
+    top: 23%;
   }
   @media screen and (max-width: 430px) {
-    right: 11%;
-    bottom: 22%;
+    right: 8%;
+    top: 22%;
   }
   button {
     border: none;
