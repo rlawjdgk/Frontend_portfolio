@@ -80,7 +80,7 @@ const DataWrap = styled.div`
 const ProjectItem = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 50px;
   @media screen and (max-width: 430px) {
     gap: 10px;
     margin-left: 7px;
@@ -185,8 +185,8 @@ const Final = styled.div`
 const CloseBtn = styled.div`
   border: none;
   position: absolute;
-  right: 28%;
-  top: 24.5%;
+  right: 27%;
+  top: 19%;
   @media screen and (max-width: 769px) {
     right: 8%;
     bottom: 23%;
