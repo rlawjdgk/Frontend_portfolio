@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { ProjectData } from "../assets/projectData"; // project 정보
+import { FaTimes } from "react-icons/fa";
 
 const ModalWrapper = styled.div`
   position: fixed;
@@ -8,7 +9,7 @@ const ModalWrapper = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -108,32 +109,6 @@ const Name = styled.span`
   }
 `;
 
-const Git = styled.p`
-  width: 100%;
-  font-size: 14px;
-  display: flex;
-  @media screen and (max-width: 769px) {
-    font-size: 14px;
-  }
-  @media screen and (max-width: 430px) {
-    font-size: 14px;
-  }
-`;
-
-const Final = styled.p`
-  width: 100%;
-  font-size: 14px;
-  display: flex;
-  margin-bottom: 30px;
-  @media screen and (max-width: 769px) {
-    font-size: 14px;
-  }
-  @media screen and (max-width: 430px) {
-    font-size: 14px;
-    margin-bottom: 10px;
-  }
-`;
-
 const Desc = styled.span`
   width: 100%;
   font-size: 16px;
@@ -153,6 +128,7 @@ const Skill = styled.span`
     height: 30px;
     object-fit: cover;
     object-position: top;
+    margin-bottom: 30px;
     @media screen and (max-width: 769px) {
       width: 25px;
       height: 25px;
@@ -168,11 +144,49 @@ const Skill = styled.span`
   }
 `;
 
+const UrlButton = styled.div`
+  display: flex;
+  gap: 10px;
+`;
+
+const Git = styled.div`
+  button {
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    background: ${(props) => props.theme.btnColor};
+    color: ${(props) => props.theme.btnTextColor};
+  }
+  @media screen and (max-width: 769px) {
+    font-size: 14px;
+  }
+  @media screen and (max-width: 430px) {
+    font-size: 14px;
+  }
+`;
+
+const Final = styled.div`
+  button {
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    background: ${(props) => props.theme.btnColor};
+    color: ${(props) => props.theme.btnTextColor};
+  }
+  @media screen and (max-width: 769px) {
+    font-size: 14px;
+  }
+  @media screen and (max-width: 430px) {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+`;
+
 const CloseBtn = styled.div`
   border: none;
   position: absolute;
-  right: 29%;
-  bottom: 25%;
+  right: 28%;
+  top: 24.5%;
   @media screen and (max-width: 769px) {
     right: 8%;
     bottom: 23%;
@@ -183,14 +197,19 @@ const CloseBtn = styled.div`
   }
   button {
     border: none;
-    width: 70px;
-    height: 35px;
-    border-radius: 20px;
+    width: 40px; /* 아이콘 크기에 맞게 조정 */
+    height: 40px;
+    border-radius: 50%; /* 둥근 버튼 */
     background: ${(props) => props.theme.btnColor};
     color: ${(props) => props.theme.btnTextColor};
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px; /* 아이콘 크기 조정 */
     @media screen and (max-width: 430px) {
-      width: 60px;
-      height: 30px;
+      width: 35px;
+      height: 35px;
+      font-size: 18px;
     }
   }
 `;
@@ -211,8 +230,6 @@ const ModalProject = ({ project, onClose }) => {
             <ProjectItem>
               <Name>{projectDetails.name}</Name>
               <ProjectDesc>
-                <Git>Git URL: {projectDetails.gitURL}</Git>
-                <Final>Final URL: {projectDetails.finalURL}</Final>
                 <Desc>{projectDetails.desc}</Desc>
                 <Skill>
                   {projectDetails.skillFirst && (
@@ -225,12 +242,26 @@ const ModalProject = ({ project, onClose }) => {
                     <img src={projectDetails.skillThird} alt="skillThird" />
                   )}
                 </Skill>
+                <UrlButton>
+                  <Git>
+                    <a href={projectDetails.gitURL}>
+                      <button>Git-hub</button>
+                    </a>
+                  </Git>
+                  <Final>
+                    <a href={projectDetails.finalURL}>
+                      <button>View Project</button>
+                    </a>
+                  </Final>
+                </UrlButton>
               </ProjectDesc>
             </ProjectItem>
           </div>
         </ProjectWrap>
         <CloseBtn>
-          <button onClick={onClose}>Close</button>
+          <button onClick={onClose}>
+            <FaTimes /> {/* X 아이콘 */}
+          </button>
         </CloseBtn>
       </Inner>
     </ModalWrapper>
