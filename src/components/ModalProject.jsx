@@ -68,6 +68,7 @@ const DataWrap = styled.div`
   img {
     width: 300px;
     height: 400px;
+    object-fit: cover;
     @media screen and (max-width: 430px) {
       width: 300px;
       height: 150px;
@@ -109,10 +110,10 @@ const Name = styled.span`
 
 const Git = styled.p`
   width: 100%;
-  font-size: 20px;
+  font-size: 14px;
   display: flex;
   @media screen and (max-width: 769px) {
-    font-size: 16px;
+    font-size: 14px;
   }
   @media screen and (max-width: 430px) {
     font-size: 14px;
@@ -121,11 +122,11 @@ const Git = styled.p`
 
 const Final = styled.p`
   width: 100%;
-  font-size: 20px;
+  font-size: 14px;
   display: flex;
   margin-bottom: 30px;
   @media screen and (max-width: 769px) {
-    font-size: 16px;
+    font-size: 14px;
   }
   @media screen and (max-width: 430px) {
     font-size: 14px;
@@ -135,9 +136,9 @@ const Final = styled.p`
 
 const Desc = styled.span`
   width: 100%;
-  font-size: 18px;
+  font-size: 16px;
   @media screen and (max-width: 430px) {
-    font-size: 14px;
+    font-size: 16px;
     width: 20%;
   }
 `;
@@ -146,7 +147,7 @@ const Skill = styled.span`
   width: 55%;
   display: flex;
   gap: 10px;
-  margin-top: 50px;
+  margin-top: 30px;
   img {
     width: 30px;
     height: 30px;
