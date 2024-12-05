@@ -15,14 +15,15 @@ export const ProjectData = [
   {
     id: 2,
     category: "publishing",
-    name: "YG Homepage",
-    image: "/img/background.jpg",
+    name: "Idol Homepage",
+    image: "/img/idol_homepage.png",
     skillFirst: "/img/html.png",
     skillSecond: "/img/css.png",
     skillThird: "/img/javascript.png",
     desc: "홈페이지는 YG의 아티스트, 음반, 이벤트 등의 다양한 콘텐츠를 제공하는 플랫폼으로 구성되었습니다. HTML, CSS, JavaScript를 사용하여 반응형 웹사이트를 구현하였으며, YG 브랜드의 공식 이미지와 스타일을 반영했습니다.",
-    gitURL: "",
-    finalURL: "",
+    gitURL:
+      "https://github.com/rlawjdgk/frontend-Developer_Project/tree/main/idol%20hompage",
+    finalURL: "https://twshomepage-project.netlify.app",
   },
   {
     id: 3,
