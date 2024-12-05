@@ -10,7 +10,7 @@ export const ProjectData = [
     desc: "구조와 스타일링을 구현하여 기본적인 페이지 레이아웃을 구성했습니다.사용자 입력 처리 및 페이지 기능을 동적으로 구현했습니다.사용자가 잘못된 이메일 주소를 입력하거나 비밀번호 조건을 충족하지 않으면 즉시 오류 메시지를 표시하도록 하여 실시간 유효성 검사를 구현했습니다.",
     gitURL:
       "https://github.com/rlawjdgk/Frontend_Developer-project/tree/main/LoginSignUp",
-    finalURL: "https://fluffy-nasturtium-6a289c.netlify.app/",
+    finalURL: "https://googleloginsignuppage.netlify.app",
   },
   {
     id: 2,
