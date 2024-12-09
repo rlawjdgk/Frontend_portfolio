@@ -84,7 +84,7 @@ const Project = styled.div`
   }
 
   .projectDetails {
-    width: 80%;
+    width: 90%;
     position: absolute;
     bottom: 34%;
     left: 4%;

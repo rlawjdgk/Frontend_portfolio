@@ -22,7 +22,7 @@ const ModalWrapper = styled.div`
 `;
 
 const Inner = styled.div`
-  width: 50%;
+  width: 60%;
   max-width: 850px;
   height: 550px;
   background: ${(props) => props.theme.bgColor};
@@ -78,9 +78,11 @@ const DataWrap = styled.div`
 `;
 
 const ProjectItem = styled.div`
+  height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  justify-content: space-around;
+  gap: 30px;
   @media screen and (max-width: 430px) {
     gap: 10px;
     margin-left: 7px;
@@ -100,6 +102,7 @@ const Name = styled.span`
   font-size: 32px;
   font-weight: bold;
   display: flex;
+  margin-bottom: 20px;
   @media screen and (max-width: 769px) {
     font-size: 24px;
   }
@@ -122,6 +125,7 @@ const Skill = styled.span`
   display: flex;
   gap: 10px;
   margin-top: 30px;
+
   img {
     width: 30px;
     height: 30px;
@@ -147,8 +151,26 @@ const Skill = styled.span`
 const UrlButton = styled.div`
   display: flex;
   gap: 10px;
+  @media screen and (max-width: 769px) {
+    margin-top: 10px;
+  }
 `;
 
+const Notion = styled.div`
+  button {
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    background: ${(props) => props.theme.btnColor};
+    color: ${(props) => props.theme.btnTextColor};
+  }
+  @media screen and (max-width: 769px) {
+    font-size: 14px;
+  }
+  @media screen and (max-width: 430px) {
+    font-size: 14px;
+  }
+`;
 const Git = styled.div`
   button {
     border: none;
@@ -185,15 +207,15 @@ const Final = styled.div`
 const CloseBtn = styled.div`
   border: none;
   position: absolute;
-  right: 27%;
-  top: 19%;
+  right: 28%;
+  top: 24.5%;
   @media screen and (max-width: 769px) {
     right: 8%;
     top: 23%;
   }
   @media screen and (max-width: 430px) {
-    right: 8%;
-    top: 22%;
+    right: 8.5%;
+    top: 12%;
   }
   button {
     border: none;
@@ -243,6 +265,11 @@ const ModalProject = ({ project, onClose }) => {
                   )}
                 </Skill>
                 <UrlButton>
+                  <Notion>
+                    <a href={projectDetails.finalURL}>
+                      <button>Notion</button>
+                    </a>
+                  </Notion>
                   <Git>
                     <a href={projectDetails.gitURL}>
                       <button>Git-hub</button>

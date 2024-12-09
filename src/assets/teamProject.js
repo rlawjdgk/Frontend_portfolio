@@ -7,9 +7,9 @@ export const teamProject = [
     skillOne: "/img/html.png",
     skillTwo: "/img/css.png",
     skillThree: "/img/javascript.png",
-    firstUrl: "https://github.com/u-ulim/teamproject-temu",
+    firstUrl: "https://github.com/rlawjdgk/First-teamproject",
     firstUrlImage: "/img/github.png",
-    secondUrl: "https://example.com/demo1",
+    secondUrl: "https://primeteamproject.netlify.app/",
     secondUrlImage: "/img/chrome.png",
   },
   {
