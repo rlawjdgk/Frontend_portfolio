@@ -265,11 +265,6 @@ const ModalProject = ({ project, onClose }) => {
                   )}
                 </Skill>
                 <UrlButton>
-                  <Notion>
-                    <a href={projectDetails.finalURL}>
-                      <button>Notion</button>
-                    </a>
-                  </Notion>
                   <Git>
                     <a href={projectDetails.gitURL}>
                       <button>Git-hub</button>

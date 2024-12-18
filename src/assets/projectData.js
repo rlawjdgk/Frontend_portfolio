@@ -28,7 +28,7 @@ export const ProjectData = [
   },
   {
     id: 3,
-    category: "publishing",
+    category: "frontend",
     name: "MBTI Website",
     image: "/img/mbti.png",
     skillFirst: "/img/react.png",
