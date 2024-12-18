@@ -78,10 +78,6 @@ const Header = ({ changeTheme }) => {
     setIsModalOpen(false);
   };
 
-  // const handleTabClick = (tab) => {
-  //   setSelectedTab(tab); // 탭 클릭 시 선택된 탭 업데이트
-  // };
-
   return (
     <Wrapper>
       <DesktopHeader>
