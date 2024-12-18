@@ -8,10 +8,9 @@ export const ProjectData = [
     skillSecond: "/img/css.png",
     skillThird: "/img/javascript.png",
     desc: "구조와 스타일링을 구현하여 기본적인 페이지 레이아웃을 구성했습니다.구글 로그인 페이지는 이메일과 비밀번호를 입력해 구글 계정에 로그인하는 화면입니다.",
-    finalURL: "https://googleloginsignuppage.netlify.app",
+    finalURL: "https://googleloginsignuppage.netlify.app/",
     gitURL:
-      "https://github.com/rlawjdgk/frontend-Developer_Project/tree/main/LoginSignUp",
-    finalURL: "https://googleloginsignuppage.netlify.app",
+      "https://github.com/rlawjdgk/Frontend-Developer_Project/tree/main/LoginSignUp",
   },
   {
     id: 2,
