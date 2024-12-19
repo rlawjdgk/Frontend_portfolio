@@ -21,7 +21,7 @@ export const ProjectData = [
     skillSecond: "/img/css.png",
     skillThird: "/img/javascript.png",
     desc: "투어스만의 컨셉으로 다양한 콘텐츠를 제공하는 플랫폼으로 구성되었습니다.",
-    finalURL: "https://googleloginsignuppage.netlify.app",
+    finalURL: "https://twssite.netlify.app/",
     gitURL:
       "https://github.com/rlawjdgk/frontend-Developer_Project/tree/main/idol%20hompage",
   },
