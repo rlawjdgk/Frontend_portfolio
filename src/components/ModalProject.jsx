@@ -156,21 +156,6 @@ const UrlButton = styled.div`
   }
 `;
 
-const Notion = styled.div`
-  button {
-    border: none;
-    border-radius: 20px;
-    padding: 8px 16px;
-    background: ${(props) => props.theme.btnColor};
-    color: ${(props) => props.theme.btnTextColor};
-  }
-  @media screen and (max-width: 769px) {
-    font-size: 14px;
-  }
-  @media screen and (max-width: 430px) {
-    font-size: 14px;
-  }
-`;
 const Git = styled.div`
   button {
     border: none;
