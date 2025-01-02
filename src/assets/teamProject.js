@@ -22,7 +22,7 @@ export const teamProject = [
     skillThree: null,
     firstUrl: "https://github.com/rlawjdgk/Second-teamproject",
     firstUrlImage: "/img/github.png",
-    secondUrl: "https://snsplateform.netlify.app/login",
+    secondUrl: "https://snsplateform.netlify.app/",
     secondUrlImage: "/img/chrome.png",
   },
 ];
