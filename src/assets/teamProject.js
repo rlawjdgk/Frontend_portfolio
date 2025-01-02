@@ -20,9 +20,9 @@ export const teamProject = [
     skillOne: "/img/react.png",
     skillTwo: "/img/netilify.png",
     skillThree: null,
-    firstUrl: "https://github.com/yerixx/Teamproject_Facebook_EZ",
+    firstUrl: "https://github.com/rlawjdgk/Second-teamproject",
     firstUrlImage: "/img/github.png",
-    secondUrl: "https://example.com/demo1",
+    secondUrl: "https://snsplateform.netlify.app/login",
     secondUrlImage: "/img/chrome.png",
   },
 ];
