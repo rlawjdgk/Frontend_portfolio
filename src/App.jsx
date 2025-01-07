@@ -6,6 +6,7 @@ import Header from "./components/Header.jsx";
 import { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme, vintageTheme, warmTheme } from "./theme.js";
 import MobileHeader from "./components/MobileHeader.jsx";
+import LandingPage from "./pages/LandingPage.jsx";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -13,18 +14,22 @@ const Wrapper = styled.div`
 
 const App = () => {
   const [theme, setTheme] = useState(lightTheme);
-  // 테마 상태를 관리하는 변수 (기본값: lightTheme
+  const [isLoading, setIsLoading] = useState(true); // 로딩 상태 추가
 
-  // 초기 테마 로드 (로컬 스토리지에서 저장된 테마를 불러옴)
+  // 초기 테마 로드
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
-    // 로컬 스토리지에서 'theme' 항목 가져오기
-
     if (savedTheme) {
       setTheme(JSON.parse(savedTheme));
-      // 로컬 스토리지에서 테마 설정
     }
-  }, []); // 빈 배열을 넣어서 컴포넌트가 처음 렌더링될 때만 실행
+
+    // 로딩 페이지가 일정 시간 후 사라지도록 설정
+    const timer = setTimeout(() => {
+      setIsLoading(false); // 로딩 상태 종료
+    }, 2000); // 3초 동안 로딩 화면 표시
+
+    return () => clearTimeout(timer); // 컴포넌트 언마운트 시 타이머 정리
+  }, []);
 
   // 테마 변경 함수
   const changeTheme = (selectedTheme) => {
@@ -39,19 +44,21 @@ const App = () => {
       newTheme = warmTheme;
     }
     setTheme(newTheme);
-    // 새로운 테마 상태로 업데이트
     localStorage.setItem("theme", JSON.stringify(newTheme));
-    // 로컬 스토리지에 선택된 테마 저장
   };
 
   return (
     <ThemeProvider theme={theme}>
-      <Wrapper>
-        <GlobalStyles />
-        <Header changeTheme={changeTheme} />
-        <MobileHeader changeTheme={changeTheme} />
-        <Main />
-      </Wrapper>
+      {isLoading ? ( // 로딩 상태에 따라 화면 조건부 렌더링
+        <LandingPage />
+      ) : (
+        <Wrapper>
+          <GlobalStyles />
+          <Header changeTheme={changeTheme} />
+          <MobileHeader changeTheme={changeTheme} />
+          <Main />
+        </Wrapper>
+      )}
     </ThemeProvider>
   );
 };
