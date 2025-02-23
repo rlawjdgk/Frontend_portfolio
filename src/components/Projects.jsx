@@ -88,8 +88,8 @@ const ProjectItem = styled.div`
     }
   }
   .data {
-    width: 230px;
-    height: 250px;
+    width: 210px;
+    height: 230px;
     background: #ccc;
     display: flex;
     border-radius: 20px;

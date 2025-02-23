@@ -49,16 +49,12 @@ const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      {isLoading ? ( // 로딩 상태에 따라 화면 조건부 렌더링
-        <LandingPage />
-      ) : (
-        <Wrapper>
-          <GlobalStyles />
-          <Header changeTheme={changeTheme} />
-          <MobileHeader changeTheme={changeTheme} />
-          <Main />
-        </Wrapper>
-      )}
+      <Wrapper>
+        <GlobalStyles />
+        <Header changeTheme={changeTheme} />
+        <MobileHeader changeTheme={changeTheme} />
+        <Main />
+      </Wrapper>
     </ThemeProvider>
   );
 };

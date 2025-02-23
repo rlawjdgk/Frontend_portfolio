@@ -189,7 +189,6 @@ const Profile = () => {
       <Inner>
         <Container>
           <NameWrap>
-            {/* <AnimalImg src="../public/img/animal.png" alt="animal" />÷ */}
             <AnimalImg>
               <svg viewBox="0 0 94 94" fill="none">
                 <path
@@ -255,31 +254,19 @@ const Profile = () => {
             </AddressWrap>
           </InfoWrap>
           <Sns>
-            <a
-              className="icon"
-              href="https://www.notion.so/K-Digital-Training-KDT-FrontEnd-Develop-13ffe56a88d9802f916bd17601120e9b?pvs=4"
-            >
+            <a className="icon" href="https://iii.ad/39bca4 ">
               <RxNotionLogo />
             </a>
-            <a
-              className="icon"
-              href="https://github.com/rlawjdgk/Frontend_Developer_-Diary"
-            >
+            <a className="icon" href="https://iii.ad/42d040">
               <FiGithub />
             </a>
             <a className="icon" href="https://rlawjdgk.tistory.com/">
               <FiBold />
             </a>
-            <a
-              className="icon"
-              href="https://linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile"
-            >
+            <a className="icon" href="https://iii.ad/5d421c">
               <FaLinkedin />
             </a>
-            <a
-              className="icon"
-              href="https://workspace.google.com/intl/ko/gmail/"
-            >
+            <a className="icon" href="https://iii.ad/e66e29">
               <FiMail />
             </a>
           </Sns>
