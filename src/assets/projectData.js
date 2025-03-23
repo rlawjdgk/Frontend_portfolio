@@ -2,19 +2,6 @@ export const ProjectData = [
   {
     id: 1,
     category: "publishing",
-    name: "Login/SignUp",
-    image: "/img/LoginSignup.png",
-    skillFirst: "/img/html.png",
-    skillSecond: "/img/css.png",
-    skillThird: "/img/javascript.png",
-    desc: "구조와 스타일링을 구현하여 기본적인 페이지 레이아웃을 구성했습니다.구글 로그인 페이지는 이메일과 비밀번호를 입력해 구글 계정에 로그인하는 화면입니다.",
-    finalURL: "https://googleloginsignuppage.netlify.app/",
-    gitURL:
-      "https://github.com/rlawjdgk/Frontend-Developer_Project/tree/main/LoginSignUp",
-  },
-  {
-    id: 2,
-    category: "publishing",
     name: "Idol Homepage",
     image: "/img/idol_homepage.png",
     skillFirst: "/img/html.png",
@@ -26,7 +13,7 @@ export const ProjectData = [
       "https://github.com/rlawjdgk/frontend-Developer_Project/tree/main/idol%20hompage",
   },
   {
-    id: 3,
+    id: 2,
     category: "frontend",
     name: "MBTI Website",
     image: "/img/mbti.png",
@@ -37,18 +24,5 @@ export const ProjectData = [
     finalURL: "https://mbtiapptest.netlify.app/",
     gitURL:
       "https://github.com/rlawjdgk/Frontend-Developer_Project/tree/main/Mbti",
-  },
-  {
-    id: 4,
-    category: "frontend",
-    name: "TS_TodoList",
-    image: "/img/todoList.png",
-    skillFirst: "/img/typescript.png",
-    skillSecond: null,
-    skillThird: null,
-    desc: "투두리스트는 사용자가 해야 할 일들을 추가, 삭제, 완료 여부 체크할 수 있도록 도와주는 간단한 프로젝트입니다.",
-    finalURL: "https://tstodolistweb.netlify.app/",
-    gitURL:
-      "https://github.com/rlawjdgk/Frontend-Developer_Project/tree/main/ts_todoList",
   },
 ];

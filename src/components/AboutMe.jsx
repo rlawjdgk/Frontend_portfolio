@@ -170,6 +170,41 @@ const MyEtcInfo = styled.div`
   display: flex;
   flex-direction: column;
   gap: 30px;
+  .birthday {
+    color: ${(props) => props.theme.textColor};
+    .item {
+      width: 100%;
+      max-width: 173px;
+      font-size: 16px;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      border: 1px solid ${(props) => props.theme.borderColor};
+      border-radius: 30px;
+      padding: 6px 18px;
+      margin-bottom: 15px;
+      @media screen and (max-width: 769px) {
+        font-size: 16px;
+      }
+      @media screen and (max-width: 390px) {
+        width: 50%;
+        font-size: 16px;
+      }
+    }
+    .date {
+      font-size: 16px;
+      padding-left: 10px;
+      @media screen and (max-width: 390px) {
+        font-size: 16px;
+      }
+      & > span {
+        margin-right: 10px;
+        @media screen and (max-width: 390px) {
+          font-size: 16px;
+        }
+      }
+    }
+  }
   .school {
     color: ${(props) => props.theme.textColor};
     .item {
@@ -201,48 +236,6 @@ const MyEtcInfo = styled.div`
     }
   }
 
-  .workExperience {
-    color: ${(props) => props.theme.textColor};
-    .item {
-      width: 100%;
-      max-width: 173px;
-      font-size: 16px;
-      font-weight: bold;
-      display: flex;
-      justify-content: center;
-      border: 1px solid ${(props) => props.theme.borderColor};
-      border-radius: 30px;
-      padding: 6px 18px;
-      margin-bottom: 15px;
-      @media screen and (max-width: 769px) {
-        font-size: 16px;
-      }
-      @media screen and (max-width: 390px) {
-        width: 50%;
-        font-size: 16px;
-      }
-      p {
-        @media screen and (max-width: 769px) {
-          flex-direction: column;
-        }
-      }
-    }
-    .date {
-      font-size: 16px;
-      padding-left: 10px;
-      @media screen and (max-width: 390px) {
-        font-size: 16px;
-      }
-      & > span {
-        font-weight: bold;
-        color: ${(props) => props.theme.nameWrap};
-        margin-right: 10px;
-        @media screen and (max-width: 390px) {
-          font-size: 16px;
-        }
-      }
-    }
-  }
   .mbti {
     color: ${(props) => props.theme.textColor};
     .item {
@@ -306,16 +299,15 @@ const AboutMe = () => {
             </div>
           </MyContact>
           <MyEtcInfo>
+            <div className="birthday">
+              <div className="item"> Work Experience</div>
+              <div className="date">
+                <span>2002.05.10</span>
+              </div>
+            </div>
             <div className="school">
               <div className="item">Education</div>
               <span>정화예술대학교 메이크업학과 졸업</span>
-            </div>
-            <div className="workExperience">
-              <div className="item"> Work Experience</div>
-              <div className="date">
-                <span> 2023 - 2024</span>
-                <p>Makeup Forever Sales</p>
-              </div>
             </div>
             <div className="mbti">
               <div className="item">MBTI</div>
